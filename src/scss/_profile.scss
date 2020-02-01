@@ -1,0 +1,33 @@
+.profile {
+  padding: 60px;
+}
+.profile-data {
+  display: flex;
+  justify-content: space-between;
+}
+
+// .accordian {
+//   height: 300px;
+//   width: 300px;
+//   border: solid 1px black;
+// }
+
+.welcome {
+  display: flex;
+  padding: 20px 0;
+  img {
+    height: 40px;
+    padding-right: 20px;
+    margin: auto 0;
+  }
+  h1 {
+    margin: auto 0;
+  }
+}
+.pie-chart {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 400px;
+  width: 400px;
+}
