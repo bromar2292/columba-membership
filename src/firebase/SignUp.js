@@ -21,11 +21,13 @@ const SignUp = ({ history }) => {
         db.collection("users")
           .doc(currentUser.user.uid)
           .set({
-            userType: "hello",
-            firstName: "hello",
-            surname: "hello",
-            location: "hello",
-            totalPoints: 0
+            name: "mr programmer",
+            pitching: "pitching details",
+            growth: "growth details",
+            experiance: "experiance details",
+            innovation: "inovation details",
+            retention: "retention details",
+            cost: "cost details"
           });
       });
     history.push("/");

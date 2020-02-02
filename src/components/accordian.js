@@ -1,37 +1,72 @@
 import React from "react";
 import "../scss/_.scss";
-const paragraph =
-  "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet natus sint provident vel ab reprehenderit cum soluta, suscipit facere nisi sed earum repellendus fuga debitis, nam molestiae minima voluptates possimus.";
-
-const data = [
-  {
-    title: "Pitching",
-    paragraph
-  },
-  {
-    title: "Growth",
-    paragraph
-  },
-  {
-    title: "Combined Experiance",
-    paragraph
-  },
-  {
-    title: "Innovation",
-    paragraph
-  },
-  {
-    title: "Retention",
-    paragraph
-  },
-  {
-    title: "Cost",
-    paragraph
-  }
-];
+import app from "../firebase/base";
+import db from "../firebase/database";
 
 class Accordion extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      user: "Columba",
+      users: []
+    };
+  }
+
+  componentWillMount() {
+    let userId = `${app.auth().currentUser.uid}`;
+    console.log(userId);
+    let User = db.collection("users").doc(userId);
+    User.get()
+      .then(doc => {
+        if (!doc.exists) {
+          console.log("No such document!");
+        } else {
+          let users = doc.data();
+          this.setState({ users: users });
+          console.log("Document data:", doc.data());
+        }
+      })
+      .catch(err => {
+        console.log("Error getting document", err);
+      });
+  }
   render() {
+    const paragraph = [
+      this.state.users.pitching,
+      this.state.users.growth,
+      this.state.users.experiance,
+      this.state.users.innovation,
+      this.state.users.retention,
+      this.state.users.cost
+    ];
+
+    console.log(this.state.users.pitching);
+    const data = [
+      {
+        title: "Pitching",
+        paragraph: this.state.users.pitching
+      },
+      {
+        title: "Growth",
+        paragraph: this.state.users.growth
+      },
+      {
+        title: "Experiance",
+        paragraph: this.state.users.experiance
+      },
+      {
+        title: "Innovation",
+        paragraph: this.state.users.innovation
+      },
+      {
+        title: "Retention",
+        paragraph: this.state.users.retention
+      },
+      {
+        title: "Cost",
+        paragraph: this.state.users.cost
+      }
+    ];
     return (
       <div {...{ className: "wrapper" }}>
         <ul {...{ className: "accordion-list" }}>
