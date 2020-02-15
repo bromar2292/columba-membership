@@ -13,7 +13,9 @@ class Header extends React.Component {
     return (
       <div className="header">
         {" "}
-        header
+        <h2>Columba</h2>
+        <h3>results</h3>
+        <h3>profile</h3>
         <button onClick={() => app.auth().signOut()}> Sign out</button>
       </div>
     );

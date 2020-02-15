@@ -27,7 +27,13 @@ const SignUp = ({ history }) => {
             experiance: "experiance details",
             innovation: "inovation details",
             retention: "retention details",
-            cost: "cost details"
+            cost: "cost details",
+            piePitching: 1,
+            pieGrowth: 2,
+            pieExperiance: 3,
+            pieInnovation: 3,
+            pieRetention: 4,
+            pieCost: 5
           });
       });
     history.push("/");

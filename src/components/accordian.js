@@ -14,7 +14,7 @@ class Accordion extends React.Component {
 
   componentWillMount() {
     let userId = `${app.auth().currentUser.uid}`;
-    console.log(userId);
+    // console.log(userId);
     let User = db.collection("users").doc(userId);
     User.get()
       .then(doc => {
@@ -23,7 +23,7 @@ class Accordion extends React.Component {
         } else {
           let users = doc.data();
           this.setState({ users: users });
-          console.log("Document data:", doc.data());
+          // console.log("Document data:", doc.data());
         }
       })
       .catch(err => {
@@ -31,15 +31,6 @@ class Accordion extends React.Component {
       });
   }
   render() {
-    const paragraph = [
-      this.state.users.pitching,
-      this.state.users.growth,
-      this.state.users.experiance,
-      this.state.users.innovation,
-      this.state.users.retention,
-      this.state.users.cost
-    ];
-
     console.log(this.state.users.pitching);
     const data = [
       {

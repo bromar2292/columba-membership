@@ -1,3 +1,21 @@
 .canvasjs-chart-credit {
   display: none !important;
 }
+
+$primarycolor: #23015b;
+$primary2: #1d48df;
+$primary3: #ffb701;
+$textcolor: white;
+
+.header {
+  width: 100vw;
+  color: $primary3;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: $primarycolor;
+  button {
+    border-radius: 10px;
+  }
+}
