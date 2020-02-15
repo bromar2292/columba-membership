@@ -57,7 +57,13 @@ class Profile extends React.Component {
         console.log("Error getting document", err);
       });
   }
+
+  
+
   render() {
+   
+   
+
     const test = `${this.state.users.logo}`;
     console.log(this.state.users.logo);
     return (
