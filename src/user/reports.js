@@ -17,12 +17,14 @@ class Results extends React.Component {
       user: "Columba",
       users: [],
       Meeting: 0,
-      nextMeeting: ""
+      nextMeeting: "",
+      download_link: ""
     };
   }
   componentWillMount() {
-    let userId = `${app.auth().currentUser.uid}`;
-    // console.log(userId);
+    let userId = app.auth().currentUser.uid;
+
+    console.log(app.auth().currentUser);
     let User = db.collection("users").doc(userId);
     User.get()
       .then(doc => {
@@ -55,8 +57,31 @@ class Results extends React.Component {
       .catch(err => {
         console.log("Error getting document", err);
       });
+
+      this.getDownloadLink();
   }
+
+  getDownloadLink = () => {
+    
+    let testRef = app.firestore().collection("documents").doc("e7oPlC8kQZd8p6Qtydao");
+    
+    testRef.get().then( (doc) => {
+      if(doc.exists){
+        console.log("link", doc.data().download_link);
+        this.setState({download_link: doc.data().download_link});
+      
+      }
+    }).catch(function(error){
+      console.log("Error getting firestore doc:", error);
+      
+    });
+  }
+
   render() {
+
+    
+    
+    const test = `${this.state.users.logo}`;
     return (
       <>
         <Header />
@@ -64,7 +89,7 @@ class Results extends React.Component {
           <div className="welcome">
             <img src={test} /> <h2> Welcome {this.state.users.name}</h2>
           </div>
-          reports
+          <a href={this.state.download_link}>download link</a>
         </div>
       </>
     );
