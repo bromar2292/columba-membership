@@ -22,6 +22,10 @@ const SignUp = ({ history }) => {
           .doc(currentUser.user.uid)
           .set({
             name: "mr programmer",
+            logo: "",
+            meeting: "",
+            reportsTimestamp: "",
+            reportsName: "",
             pitching: "pitching details",
             growth: "growth details",
             experiance: "experiance details",
@@ -33,10 +37,33 @@ const SignUp = ({ history }) => {
             pieExperiance: 3,
             pieInnovation: 3,
             pieRetention: 4,
-            pieCost: 5
+            pieCost: 5,
+            docs: "e7oPlC8kQZd8p6Qtydao",
+            pitchingHours: 0,
+            pitchingEnters: 0,
+            pitchingWin: 0,
+            growthEmployees: 0,
+            growthIncome: 0,
+            growthProjects: 0,
+            experience2: 0,
+            experience5: 0,
+            experience10: 0,
+            experience15: 0,
+            retentionProject: 0,
+            retentionClients: 0,
+            retentionLeft: 0,
+            costHourSenior: 0,
+            costHourJunior: 0,
+            costDaySenior: 0,
+            costDayJunior: 0,
+            costIdea: 0,
+            costMargin: 0,
+            DeliveryOnTime: 0,
+            DeliveryBeforeDate: 0,
+            DeliveryAfterDate: 0
           });
       });
-    history.push("/");
+    history.push("/login");
     // [history];
   };
 

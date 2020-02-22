@@ -20,7 +20,7 @@ class Chart extends Component {
       users: [],
       chartData: {
         labels: [
-          "Cost",
+          "Number of hours spent on prep ,Number of pitches entered,Win ratio",
           "Pitching",
           "Experiance",
           "Innovation",

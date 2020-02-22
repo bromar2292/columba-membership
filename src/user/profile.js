@@ -5,7 +5,7 @@ import "../scss/_.scss";
 import Header from "../components/header";
 import Accordian from "../components/accordian";
 import logo from "./logo.png";
-import Pie from "../components/pie2";
+import Pie from "../components/pie3";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { AuthContext } from "../firebase/Auth";
 import { Link, RichText, Date } from "prismic-reactjs";
@@ -36,20 +36,20 @@ class Profile extends React.Component {
             Meeting: users.meeting.seconds * 1000
           });
           // console.log("Document data:", doc.data());
-          console.log(users.meeting.seconds * 1000);
-          console.log(users.meeting.nanoseconds);
+          // console.log(users.meeting.seconds * 1000);
+          // console.log(users.meeting.nanoseconds);
           let currentDate = new Date(this.state.Meeting);
           let time = new Date(currentDate + users.meeting.nanoseconds);
-          console.log(time);
+          // console.log(time);
 
           let hours = time.getUTCHours();
           let mins = time.getUTCMinutes();
-          console.log(hours);
+          // console.log(hours);
           let date = currentDate.getDate();
           let month = currentDate.getMonth();
           let year = currentDate.getFullYear();
           let datString = `${date}-${month + 1}-${year} at ${hours}${mins} `;
-          console.log(datString);
+          // console.log(datString);
           this.setState({ nextMeeting: datString });
         }
       })
@@ -58,12 +58,8 @@ class Profile extends React.Component {
       });
   }
 
-  
-
   render() {
-   
-   
-
+    console.log(this.state.user.name);
     const test = `${this.state.users.logo}`;
     console.log(this.state.users.logo);
     return (

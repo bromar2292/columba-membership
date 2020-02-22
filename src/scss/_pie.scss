@@ -1,0 +1,323 @@
+.chart-skills {
+  position: relative;
+  margin-left: 500px;
+  width: 350px;
+  height: 175px;
+}
+.chart-skills::before,
+.chart-skills::after {
+  position: absolute;
+}
+
+.chart-skills::before {
+  content: "";
+  width: inherit;
+  height: inherit;
+  //   border: 45px solid rgba(168, 54, 54, 0.3);
+  border-bottom: none;
+  border-top-left-radius: 350px;
+  border-top-right-radius: 350px;
+}
+
+.chart-skills::after {
+  // content: "Top Skills";
+  left: 50%;
+  bottom: 0px;
+  transform: translateX(-50%);
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: cadetblue;
+}
+.chart-skills li {
+  position: absolute;
+  top: 110%;
+  left: 0;
+  width: inherit;
+  height: inherit;
+  border: 75px solid;
+  border-top: none;
+  border-bottom-left-radius: 175px;
+  border-bottom-right-radius: 175px;
+  transform-origin: 50% 0;
+  animation-fill-mode: forwards;
+  animation-duration: 0.4s;
+  animation-timing-function: linear;
+  list-style-type: none;
+}
+.chart-skills span {
+  position: absolute;
+  font-size: 0.95rem;
+}
+
+.chart-skills li:nth-child(1) span {
+  top: 5px;
+  left: 10px;
+  transform: rotate(-0.6deg);
+}
+.chart-skills li:nth-child(1) div {
+  position: absolute;
+  bottom: 0;
+  width: 400px;
+  background: white;
+  padding: 20px;
+  margin-left: -480px;
+  transform: rotate(-0.7deg);
+  box-shadow: 0 0 0.8rem 0.1rem rgba(darken($cAccent, 20%), 0.06),
+    0 20px 30px -10px rgba(darken($cAccent, 20%), 0.2);
+  border-radius: 10px;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.5s;
+}
+.chart-skills li:nth-child(1):hover div {
+  visibility: visible;
+  opacity: 1;
+}
+
+.chart-skills li:nth-child(2) span {
+  top: 20px;
+  left: 10px;
+  transform: rotate(-59.2deg);
+}
+.chart-skills li:nth-child(2) div {
+  position: relative;
+  bottom: 0;
+  width: 400px;
+  background: white;
+  padding: 20px;
+  margin-left: -330px;
+  margin-top: 250px;
+  transform: rotate(-60deg);
+  box-shadow: 0 0 0.8rem 0.1rem rgba(darken($cAccent, 20%), 0.06),
+    0 20px 30px -10px rgba(darken($cAccent, 20%), 0.2);
+  border-radius: 10px;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.5s;
+}
+.chart-skills li:nth-child(2):hover div {
+  visibility: visible;
+  opacity: 1;
+}
+
+.chart-skills li:nth-child(3) span {
+  top: 18px;
+  left: 10px;
+  transform: rotate(-120.4deg);
+}
+.chart-skills li:nth-child(3) div {
+  position: relative;
+  bottom: 0;
+  width: 400px;
+  background: white;
+  padding: 20px;
+  margin-left: 130px;
+  margin-top: 270px;
+  transform: rotate(-120deg);
+  box-shadow: 0 0 0.8rem 0.1rem rgba(darken($cAccent, 20%), 0.06),
+    0 20px 30px -10px rgba(darken($cAccent, 20%), 0.2);
+  border-radius: 10px;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.5s;
+}
+.chart-skills li:nth-child(3):hover div {
+  visibility: visible;
+  opacity: 1;
+}
+.chart-skills li:nth-child(4) span {
+  top: 10px;
+  left: 10px;
+  transform: rotate(-170deg);
+}
+.chart-skills li:nth-child(4) div {
+  position: absolute;
+  bottom: 0;
+  width: 400px;
+  background: white;
+  padding: 20px;
+  margin-left: 330px;
+  transform: rotate(-170deg);
+  box-shadow: 0 0 0.8rem 0.1rem rgba(darken($cAccent, 20%), 0.06),
+    0 20px 30px -10px rgba(darken($cAccent, 20%), 0.2);
+  border-radius: 10px;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.5s;
+}
+.chart-skills li:nth-child(4):hover div {
+  visibility: visible;
+  opacity: 1;
+}
+.chart-skills li:nth-child(5) span {
+  top: 10px;
+  left: 10px;
+  transform: rotate(-240deg);
+}
+.chart-skills li:nth-child(5) div {
+  position: relative;
+  bottom: 0;
+  width: 400px;
+  background: white;
+  padding: 20px;
+  margin-left: 130px;
+  margin-top: -430px;
+  transform: rotate(-240deg);
+  box-shadow: 0 0 0.8rem 0.1rem rgba(darken($cAccent, 20%), 0.06),
+    0 20px 30px -10px rgba(darken($cAccent, 20%), 0.2);
+  border-radius: 10px;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.5s;
+}
+.chart-skills li:nth-child(5):hover div {
+  visibility: visible;
+  opacity: 1;
+}
+.chart-skills li:nth-child(6) span {
+  top: 10px;
+  left: 10px;
+  transform: rotate(-300deg);
+}
+.chart-skills li:nth-child(6) div {
+  position: relative;
+  bottom: 0;
+  width: 400px;
+  background: white;
+  padding: 20px;
+  margin-left: -350px;
+  margin-top: -400px;
+  transform: rotate(-300deg);
+  box-shadow: 0 0 0.8rem 0.1rem rgba(darken($cAccent, 20%), 0.06),
+    0 20px 30px -10px rgba(darken($cAccent, 20%), 0.2);
+  border-radius: 10px;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.5s;
+}
+.chart-skills li:nth-child(6):hover div {
+  visibility: visible;
+  opacity: 1;
+}
+
+.chart-skills li:nth-child(1) {
+  z-index: 12;
+  border-color: orange;
+  animation-name: rotate-one;
+  animation-delay: 0.2s;
+}
+
+.chart-skills li:nth-child(2) {
+  z-index: 11;
+  border-color: firebrick;
+  animation-name: rotate-two;
+  animation-delay: 0.4s;
+}
+
+.chart-skills li:nth-child(3) {
+  z-index: 10;
+  border-color: green;
+  animation-name: rotate-three;
+  animation-delay: 0.8s;
+}
+
+.chart-skills li:nth-child(4) {
+  z-index: 3;
+  border-color: orange;
+  animation-name: rotate-four;
+  animation-delay: 1.2s;
+}
+.chart-skills li:nth-child(5) {
+  z-index: 19;
+  border-color: rgb(46, 20, 163);
+  animation-name: rotate-five;
+  animation-delay: 1.4s;
+}
+.chart-skills li:nth-child(6) {
+  z-index: 17;
+  border-color: yellow;
+  animation-name: rotate-six;
+  animation-delay: 1.6s;
+}
+@keyframes rotate-one {
+  0% {
+    transform: rotate(300.6deg);
+  }
+  100% {
+    transform: rotate(360.2deg);
+    /**
+     * 32% => 57.6deg 
+     * 57.6 + 21.6 => 79.2deg
+     */
+  }
+}
+
+@keyframes rotate-two {
+  0% {
+    transform: rotate(1.6deg);
+  }
+  100% {
+    transform: rotate(60.2deg);
+    /**
+     * 32% => 57.6deg 
+     * 57.6 + 21.6 => 79.2deg
+     */
+  }
+}
+
+@keyframes rotate-three {
+  0% {
+    transform: rotate(60.2deg);
+  }
+  100% {
+    transform: rotate(120.4deg);
+    /**
+     * 34% => 61.2deg 
+     * 61.2 + 79.2 => 140.4deg
+     */
+  }
+}
+
+@keyframes rotate-four {
+  0% {
+    transform: rotate(120.4deg);
+  }
+  100% {
+    transform: rotate(170deg);
+    /**
+     * 22% => 39.6deg  
+     * 140.4 + 39.6 => 180deg
+     */
+  }
+}
+@keyframes rotate-five {
+  0% {
+    transform: rotate(180.4deg);
+  }
+  100% {
+    transform: rotate(240deg);
+    /**
+     * 22% => 39.6deg  
+     * 140.4 + 39.6 => 180deg
+     */
+  }
+}
+@keyframes rotate-six {
+  0% {
+    transform: rotate(240.4deg);
+  }
+  100% {
+    transform: rotate(300deg);
+    /**
+     * 22% => 39.6deg  
+     * 140.4 + 39.6 => 180deg
+     */
+  }
+}
+
+.chart-skills li {
+  /* existing rules....*/
+
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+}

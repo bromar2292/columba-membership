@@ -15,9 +15,16 @@ class Header extends React.Component {
         {" "}
         <h2>Columba</h2>
         {/* <button onClick={() =>  } >results</button> */}
-        <Link to="/reports">results</Link>
-        <h3>profile</h3>
-        <button onClick={() => app.auth().signOut()}> Sign out</button>
+        <Link className="header-link" to="/reports">
+          Brand Reports
+        </Link>
+        <Link className="header-link" to="/profile">
+          Profile
+        </Link>
+        <Link onClick={() => app.auth().signOut()} to="/login">
+          {" "}
+          Sign out
+        </Link>
       </div>
     );
   }
