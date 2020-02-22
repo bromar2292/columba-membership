@@ -4,6 +4,8 @@ import app from "../src/firebase/base";
 import { AuthContext } from "../src/firebase/Auth";
 
 const Login = ({ history }) => {
+
+  
   const handleLogin = useCallback(
     async event => {
       event.preventDefault();
@@ -19,29 +21,36 @@ const Login = ({ history }) => {
     },
     [history]
   );
+  
 
-  const { currentUser } = useContext(AuthContext);
+  let currentUser  = app.auth().currentUser;
 
-  if (currentUser) {
+  if (currentUser != null) {
     return <Redirect to="/profile" />;
+  }else{
+
+    
+
+    return (
+      <div className="page-container">
+        <div className="login-container">
+          <h1 className="title">Log in</h1>
+          <form onSubmit={handleLogin} className="form">
+            <label>
+              <input name="email" type="email" placeholder="Email" />
+            </label>
+            <label>
+              <input name="password" type="password" placeholder="Password" />
+            </label>
+            <button type="submit">Log in</button>
+          </form>
+        </div>
+      </div>
+    );
+    
   }
 
-  return (
-    <div className="page-container">
-      <div className="login-container">
-        <h1 className="title">Log in</h1>
-        <form onSubmit={handleLogin} className="form">
-          <label>
-            <input name="email" type="email" placeholder="Email" />
-          </label>
-          <label>
-            <input name="password" type="password" placeholder="Password" />
-          </label>
-          <button type="submit">Log in</button>
-        </form>
-      </div>
-    </div>
-  );
+  
 };
 
 export default withRouter(Login);
