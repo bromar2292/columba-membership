@@ -20,7 +20,7 @@ class Chart extends Component {
       users: [],
       chartData: {
         labels: [
-          "Number of hours spent on prep ,Number of pitches entered,Win ratio",
+          "cost",
           "Pitching",
           "Experiance",
           "Innovation",
@@ -92,6 +92,7 @@ class Chart extends Component {
   }
 
   render() {
+    const click = <div>rad</div>;
     return (
       <div className="chart">
         <Doughnut
@@ -100,7 +101,7 @@ class Chart extends Component {
             title: {
               display: true,
               text: "Agency Score",
-              hover: false
+              onHover: false
             }
           }}
         />

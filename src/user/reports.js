@@ -88,17 +88,15 @@ class Results extends React.Component {
           <div className="welcome-reports">
             <img src={test} /> <h2> Welcome {this.state.users.name}</h2>
           </div>
-          <div className='report-title'> 
-          <h3>Name</h3>
-          <h3>Date</h3>
-          <h6>Download pdf</h6>
+          <div className="report-title">
+            <h3>Name</h3>
+            <h3>Date</h3>
+            <h6>Download pdf</h6>
           </div>
           <div className="reports">
             <h4> {this.state.users.reportsName}</h4>
             <p>{this.state.reportsTimestamp}</p>
-            <a href={this.state.download_link}>
-              <img className="pdf " src={pdf} />
-            </a>
+            <a href={this.state.download_link}>download link</a>
           </div>
           ;
         </div>

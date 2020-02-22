@@ -7,7 +7,7 @@ import ColumbaLogin from "../columba/columbaLogin";
 import ColumbaDashboard from "../columba/dashboard";
 import "../scss/_.scss";
 import PrivateRoute from "../PrivateRoute";
-import Pie from "../components/pie3";
+import Pie from "../components/pie";
 import "./App.css";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { Authprovider } from "../firebase/Auth";
