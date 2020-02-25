@@ -41,14 +41,35 @@ class Chart extends Component {
         console.log("Error getting document", err);
       });
   }
+  Classname = e => {
+    if (e === 1) {
+      return "1";
+    } else if (e === 2) {
+      return "2";
+    } else if (e === 3) {
+      return "3";
+    } else if (e === 4) {
+      return "4";
+    } else if (e === 5) {
+      return "5";
+    }
+  };
 
   render() {
+    console.log(this.Classname(this.state.users.pieCost));
+    console.log(this.Classname(this.state.users.pieExperiance));
+    console.log(this.Classname(this.state.users.pieGrowth));
+
     return (
-      <div>
+      <div className="chart">
         <ul class="chart-skills">
-          <li>
+          <li
+            className={`cost-content${this.Classname(
+              this.state.users.pieCost
+            )}`}
+          >
             <span>Cost</span>
-            <div className="Cost-content">
+            <div>
               <h2>Cost</h2>
               <p>
                 {" "}
@@ -63,9 +84,13 @@ class Chart extends Component {
               </p>
             </div>
           </li>
-          <li>
+          <li
+            className={`experiance-content${this.Classname(
+              this.state.users.pieExperiance
+            )}`}
+          >
             <span>Experiance</span>
-            <div className="Experiance-content">
+            <div>
               <h2>Experiance</h2>
               <p>
                 {this.state.users.experience2} % of employees with less than 2
@@ -79,9 +104,13 @@ class Chart extends Component {
               </p>
             </div>
           </li>
-          <li>
+          <li
+            className={`Growth-content${this.Classname(
+              this.state.users.pieGrowth
+            )}`}
+          >
             <span>Growth</span>
-            <div className="Growth-content">
+            <div>
               <h2>Growth</h2>
               <p>
                 {this.state.users.growthEmployees}% increase in number of
@@ -93,9 +122,15 @@ class Chart extends Component {
               </p>
             </div>
           </li>
-          <li>
+        </ul>
+        <ul class="chart-skills2">
+          <li
+            className={`delivery-content${this.Classname(
+              this.state.users.pieInnovation
+            )}`}
+          >
             <span className="delivery">Delivery</span>
-            <div className="delivery-content">
+            <div>
               <h2>Delivery</h2>
               <p>
                 {" "}
@@ -110,9 +145,13 @@ class Chart extends Component {
               </p>
             </div>
           </li>
-          <li>
+          <li
+            className={
+              "pitching-content" + this.Classname(this.state.users.piePitching)
+            }
+          >
             <span>Pitching</span>
-            <div className="Pitching-content">
+            <div>
               <h2>Pitching</h2>
               <p>
                 {this.state.users.pitchingHours} Number of hours spent on prep{" "}
@@ -123,9 +162,14 @@ class Chart extends Component {
               </p>
             </div>
           </li>
-          <li>
+          <li
+            className={
+              "Retention-content" +
+              this.Classname(this.state.users.pieRetention)
+            }
+          >
             <span>Retention</span>
-            <div className="Retention-content">
+            <div>
               <h2>Retention</h2>
               <p>
                 {this.state.users.retentionProject} % of clients retained after
