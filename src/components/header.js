@@ -21,11 +21,16 @@ class Header extends React.Component {
         <Link className="header-link" to="/profile">
           Profile
         </Link>
-        <Link onClick={() => app.auth().signOut()} to="/login">
-          {" "}
+
+        <Link onClick={  () => 
+          app.auth().signOut()
+          
+           } to="/">
+          
           Sign out
         </Link>
-      </div>
+       
+      </div> 
     );
   }
 }
