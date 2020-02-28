@@ -128,8 +128,16 @@ class Results extends React.Component {
             <h6>Download pdf</h6>
           </div>
           <div className="reports">
-            <h4>{this.users.reportsName}</h4>
-            <p>{this.users.reportsTimestamp}</p>
+            <h4>
+              {this.state.users.reportsName
+                ? this.state.users.reportsName
+                : "name"}
+            </h4>
+            <p>
+              {this.state.users.reportsTimestamp
+                ? this.state.users.reportsTimestamp
+                : "date"}
+            </p>
             <a href={this.state.download_link} target="_blank">
               Download Link{" "}
             </a>
