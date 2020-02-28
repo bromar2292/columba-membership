@@ -13,19 +13,19 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { Authprovider } from "../firebase/Auth";
 
 const App = () => (
-  <Authprovider>
-    <Router>
-      <div>
-        <Route exact path="/" component={Login} />
-        <Route path="/signup" component={Register} />
+  <Router>
+    <div>
+      <Route exact path="/login" component={Login} />
+      <Route path="/signup" component={Register} />
+      <Authprovider>
         <PrivateRoute path="/profile" component={Profile} />
         <PrivateRoute path="/reports" component={Reports} />
         <Route path="/columbaLogin" component={ColumbaLogin} />
         <Route path="/pie" component={Pie} />
         <Route path="/columbaDashboard" component={ColumbaDashboard} />
-      </div>
-    </Router>
-  </Authprovider>
+      </Authprovider>
+    </div>
+  </Router>
 );
 
 export default App;

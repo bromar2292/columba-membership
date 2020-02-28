@@ -7,18 +7,12 @@ $primary2: #1d48df;
 $primary3: #ffb701;
 $textcolor: white;
 .profile {
-  padding: 60px;
+  padding: 80px 60px 60px 260px;
 }
 .profile-data {
   display: flex;
   justify-content: space-between;
 }
-
-// .accordian {
-//   height: 300px;
-//   width: 300px;
-//   border: solid 1px black;
-// }
 
 .welcome {
   display: flex;
@@ -35,9 +29,9 @@ $textcolor: white;
 
 .pie-chart {
   display: flex;
-  flex-direction: column;
+
   justify-content: center;
-  margin-left: -150px;
+  // margin-left: -150px;
   margin-top: -150px;
   margin-right: 50px;
   // height: 400px;
@@ -46,6 +40,10 @@ $textcolor: white;
 .chart {
   width: 800px;
   margin-top: -100px;
+}
+.accordian-timeStamp {
+  display: flex;
+  flex-direction: column;
 }
 .timestamp {
   margin: 50px 0;

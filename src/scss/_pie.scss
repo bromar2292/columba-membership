@@ -1,9 +1,17 @@
+.pie-container {
+  display: flex;
+  flex-direction: column-reverse;
+
+  padding: 30px;
+}
 .chart {
-  margin-top: 100px;
+  position: absolute;
+  margin-top: -220px;
+  margin-left: -90px;
 }
 .chart-skills {
   position: relative;
-  margin-left: 400px;
+  margin-left: 100px;
 
   padding-bottom: 10px;
   width: 350px;
@@ -11,7 +19,7 @@
 }
 .chart-skills2 {
   position: relative;
-  margin-left: 400px;
+  margin-left: 100px;
   margin-top: -15px;
   width: 350px;
   height: 175px;
@@ -65,11 +73,11 @@
 }
 .chart-skills li {
   position: absolute;
-  top: 110%;
+  top: 101%;
   left: 0;
   width: inherit;
   height: inherit;
-  border: 75px solid;
+  border: 80px solid;
   border-top: none;
   border-bottom-left-radius: 175px;
   border-bottom-right-radius: 175px;
@@ -81,11 +89,11 @@
 }
 .chart-skills2 li {
   position: absolute;
-  top: 110%;
+  top: 101%;
   left: 0;
   width: inherit;
   height: inherit;
-  border: 75px solid;
+  border: 80px solid;
   border-top: none;
   border-bottom-left-radius: 175px;
   border-bottom-right-radius: 175px;
@@ -109,10 +117,11 @@
 .chart-skills .cost-content3 span,
 .chart-skills .cost-content4 span,
 .chart-skills .cost-content5 span {
-  top: 5px;
+  top: 15px;
   left: 10px;
   transform: rotate(-59.6deg);
 }
+
 .chart-skills2 .delivery-content1 span,
 .chart-skills2 .delivery-content2 span,
 .chart-skills2 .delivery-content3 span,
@@ -123,268 +132,49 @@
   transform: rotate(-240.6deg);
 }
 
-.chart-skills .cost-content1 div,
-.chart-skills .cost-content2 div,
-.chart-skills .cost-content3 div,
-.chart-skills .cost-content4 div,
-.chart-skills .cost-content5 div {
-  position: absolute;
-  bottom: 0;
-  width: 400px;
-  background: white;
-  padding: 20px;
-  margin-left: -400px;
-
-  transform: rotate(-60.7deg);
-  box-shadow: 0 0 0.8rem 0.1rem rgba(darken($cAccent, 20%), 0.06),
-    0 20px 30px -10px rgba(darken($cAccent, 20%), 0.2);
-  border-radius: 10px;
-  visibility: hidden;
-  opacity: 0;
-  transition: 0.5s;
-}
-.chart-skills2 .delivery-content1 div,
-.chart-skills2 .delivery-content2 div,
-.chart-skills2 .delivery-content3 div,
-.chart-skills2 .delivery-content4 div,
-.chart-skills2 .delivery-content5 div {
-  position: absolute;
-  bottom: 0;
-  width: 400px;
-  background: white;
-  padding: 20px;
-  margin-left: 80px;
-  transform: rotate(-0.7deg);
-  box-shadow: 0 0 0.8rem 0.1rem rgba(darken($cAccent, 20%), 0.06),
-    0 20px 30px -10px rgba(darken($cAccent, 20%), 0.2);
-  border-radius: 10px;
-  visibility: hidden;
-  opacity: 0;
-  transition: 0.5s;
-}
-// .chart-skills2 li:nth-child(1) div {
-//   position: absolute;
-//   bottom: 0;
-//   width: 400px;
-//   background: white;
-//   padding: 20px;
-//   margin-left: -480px;
-//   transform: rotate(-0.7deg);
-//   box-shadow: 0 0 0.8rem 0.1rem rgba(darken($cAccent, 20%), 0.06),
-//     0 20px 30px -10px rgba(darken($cAccent, 20%), 0.2);
-//   border-radius: 10px;
-//   visibility: hidden;
-//   opacity: 0;
-//   transition: 0.5s;
-// }
-.chart-skills .cost-content1:hover div,
-.chart-skills .cost-content2:hover div,
-.chart-skills .cost-content3:hover div,
-.chart-skills .cost-content4:hover div,
-.chart-skills .cost-content5:hover div {
-  visibility: visible;
-  opacity: 1;
-}
-.chart-skills2 li:nth-child(1):hover div {
-  visibility: visible;
-  opacity: 1;
-}
-
 .chart-skills li:nth-child(2) span {
-  top: 20px;
-  left: 10px;
-  transform: rotate(-59.2deg);
+  z-index: 20;
+  top: 10px;
+  left: -5px;
+  transform: rotate(-120.2deg);
 }
 .chart-skills2 li:nth-child(2) span {
   top: 20px;
   left: 10px;
-  transform: rotate(-59.2deg);
-}
-.chart-skills li:nth-child(2) div {
-  position: relative;
-  bottom: 0;
-  width: 400px;
-  background: white;
-  padding: 20px;
-  margin-left: -330px;
-  margin-top: 250px;
-  transform: rotate(-60deg);
-  box-shadow: 0 0 0.8rem 0.1rem rgba(darken($cAccent, 20%), 0.06),
-    0 20px 30px -10px rgba(darken($cAccent, 20%), 0.2);
-  border-radius: 10px;
-  visibility: hidden;
-  opacity: 0;
-  transition: 0.5s;
-}
-.chart-skills2 li:nth-child(2) div {
-  position: relative;
-  bottom: 0;
-  width: 400px;
-  background: white;
-  padding: 20px;
-  margin-left: -330px;
-  margin-top: 250px;
-  transform: rotate(-60deg);
-  box-shadow: 0 0 0.8rem 0.1rem rgba(darken($cAccent, 20%), 0.06),
-    0 20px 30px -10px rgba(darken($cAccent, 20%), 0.2);
-  border-radius: 10px;
-  visibility: hidden;
-  opacity: 0;
-  transition: 0.5s;
-}
-.chart-skills li:nth-child(2):hover div {
-  visibility: visible;
-  opacity: 1;
-}
-.chart-skills2 li:nth-child(2):hover div {
-  visibility: visible;
-  opacity: 1;
+  transform: rotate(60.2deg);
 }
 
 .chart-skills li:nth-child(3) span {
   top: 18px;
   left: 10px;
-  transform: rotate(-120.4deg);
+  transform: rotate(-180.4deg);
 }
 .chart-skills2 li:nth-child(3) span {
   top: 18px;
   left: 10px;
-  transform: rotate(-120.4deg);
+  transform: rotate(-0.4deg);
 }
-.chart-skills li:nth-child(3) div {
+.blank {
+  width: 400px;
+  padding: 20px;
+}
+.chart-info {
+  margin-top: 60px;
+  margin-bottom: -20px;
+  margin-right: 200px;
   position: relative;
   bottom: 0;
   width: 400px;
   background: white;
   padding: 20px;
-  margin-left: 130px;
-  margin-top: 270px;
-  transform: rotate(-120deg);
+
   box-shadow: 0 0 0.8rem 0.1rem rgba(darken($cAccent, 20%), 0.06),
     0 20px 30px -10px rgba(darken($cAccent, 20%), 0.2);
   border-radius: 10px;
-  visibility: hidden;
-  opacity: 0;
-  transition: 0.5s;
-}
-.chart-skills2 li:nth-child(3) div {
-  position: relative;
-  bottom: 0;
-  width: 400px;
-  background: white;
-  padding: 20px;
-  margin-left: 130px;
-  margin-top: 270px;
-  transform: rotate(-120deg);
-  box-shadow: 0 0 0.8rem 0.1rem rgba(darken($cAccent, 20%), 0.06),
-    0 20px 30px -10px rgba(darken($cAccent, 20%), 0.2);
-  border-radius: 10px;
-  visibility: hidden;
-  opacity: 0;
-  transition: 0.5s;
-}
-.chart-skills li:nth-child(3):hover div {
   visibility: visible;
   opacity: 1;
+  transition: 0.5s;
 }
-.chart-skills2 li:nth-child(3):hover div {
-  visibility: visible;
-  opacity: 1;
-}
-// .chart-skills li:nth-child(4) span {
-//   top: 10px;
-//   left: 10px;
-//   transform: rotate(-170deg);
-// }
-// .chart-skills li:nth-child(4) div {
-//   position: absolute;
-//   bottom: 0;
-//   width: 400px;
-//   background: white;
-//   padding: 20px;
-//   margin-left: 330px;
-//   transform: rotate(-170deg);
-//   box-shadow: 0 0 0.8rem 0.1rem rgba(darken($cAccent, 20%), 0.06),
-//     0 20px 30px -10px rgba(darken($cAccent, 20%), 0.2);
-//   border-radius: 10px;
-//   visibility: hidden;
-//   opacity: 0;
-//   transition: 0.5s;
-// }
-// .chart-skills li:nth-child(4):hover div {
-//   visibility: visible;
-//   opacity: 1;
-// }
-// .chart-skills li:nth-child(5) span {
-//   top: 10px;
-//   left: 10px;
-//   transform: rotate(-240deg);
-// }
-// .chart-skills li:nth-child(5) div {
-//   position: relative;
-//   bottom: 0;
-//   width: 400px;
-//   background: white;
-//   padding: 20px;
-//   margin-left: 130px;
-//   margin-top: -430px;
-//   transform: rotate(-240deg);
-//   box-shadow: 0 0 0.8rem 0.1rem rgba(darken($cAccent, 20%), 0.06),
-//     0 20px 30px -10px rgba(darken($cAccent, 20%), 0.2);
-//   border-radius: 10px;
-//   visibility: hidden;
-//   opacity: 0;
-//   transition: 0.5s;
-// }
-// .chart-skills li:nth-child(5):hover div {
-//   visibility: visible;
-//   opacity: 1;
-// }
-// .chart-skills li:nth-child(6) span {
-//   top: 10px;
-//   left: 10px;
-//   transform: rotate(-300deg);
-// }
-// .chart-skills li:nth-child(6) div {
-//   position: relative;
-//   bottom: 0;
-//   width: 400px;
-//   background: white;
-//   padding: 20px;
-//   margin-left: -350px;
-//   margin-top: -400px;
-//   transform: rotate(-300deg);
-//   box-shadow: 0 0 0.8rem 0.1rem rgba(darken($cAccent, 20%), 0.06),
-//     0 20px 30px -10px rgba(darken($cAccent, 20%), 0.2);
-//   border-radius: 10px;
-//   visibility: hidden;
-//   opacity: 0;
-//   transition: 0.5s;
-// }
-// .chart-skills li:nth-child(6):hover div {
-//   visibility: visible;
-//   opacity: 1;
-// }
-// .chart-skills li:nth-child(6) div {
-//   position: relative;
-//   bottom: 0;
-//   width: 400px;
-//   background: white;
-//   padding: 20px;
-//   margin-left: -350px;
-//   margin-top: -400px;
-//   transform: rotate(-300deg);
-//   box-shadow: 0 0 0.8rem 0.1rem rgba(darken($cAccent, 20%), 0.06),
-//     0 20px 30px -10px rgba(darken($cAccent, 20%), 0.2);
-//   border-radius: 10px;
-//   visibility: hidden;
-//   opacity: 0;
-//   transition: 0.5s;
-// }
-// .chart-skills li:nth-child(6):hover div {
-//   visibility: visible;
-//   opacity: 1;
-// }
 
 .chart-skills .cost-content1 {
   z-index: 4;
@@ -423,62 +213,161 @@
 //   animation-name: rotate-one;
 //   animation-delay: 0.4s;
 // }
-.chart-skills2 li:nth-child(1) {
+
+.chart-skills .experiance-content1 {
+  z-index: 3;
+  border-color: red;
+  animation-name: rotate-two;
+  animation-delay: 0.4s;
+}
+.chart-skills .experiance-content2 {
+  z-index: 3;
+  border-color: orange;
+  animation-name: rotate-two;
+  animation-delay: 0.4s;
+}
+.chart-skills .experiance-content3 {
+  z-index: 3;
+  border-color: yellow;
+  animation-name: rotate-two;
+  animation-delay: 0.4s;
+}
+.chart-skills .experiance-content4 {
+  z-index: 3;
+  border-color: yellowgreen;
+  animation-name: rotate-two;
+  animation-delay: 0.4s;
+}
+.chart-skills .experiance-content5 {
+  z-index: 3;
+  border-color: green;
+  animation-name: rotate-two;
+  animation-delay: 0.4s;
+}
+
+.chart-skills .Growth-content1 {
+  z-index: 2;
+  border-color: red;
+  animation-name: rotate-three;
+  animation-delay: 0.6s;
+}
+.chart-skills .Growth-content2 {
+  z-index: 2;
+  border-color: orange;
+  animation-name: rotate-three;
+  animation-delay: 0.6s;
+}
+.chart-skills .Growth-content3 {
+  z-index: 2;
+  border-color: yellow;
+  animation-name: rotate-three;
+  animation-delay: 0.6s;
+}
+.chart-skills .Growth-content4 {
+  z-index: 2;
+  border-color: yellowgreen;
+  animation-name: rotate-three;
+  animation-delay: 0.6s;
+}
+.chart-skills .Growth-content5 {
+  z-index: 2;
+  border-color: green;
+  animation-name: rotate-three;
+  animation-delay: 0.6s;
+}
+
+.chart-skills2 .delivery-content1 {
+  z-index: 4;
+  border-color: red;
+  animation-name: rotate-one;
+  animation-delay: 0.8s;
+}
+.chart-skills2 .delivery-content2 {
+  z-index: 4;
+  border-color: orange;
+  animation-name: rotate-one;
+  animation-delay: 0.8s;
+}
+.chart-skills2 .delivery-content3 {
+  z-index: 4;
+  border-color: yellow;
+  animation-name: rotate-one;
+  animation-delay: 0.8s;
+}
+.chart-skills2 .delivery-content4 {
+  z-index: 4;
+  border-color: yellowgreen;
+  animation-name: rotate-one;
+  animation-delay: 0.8s;
+}
+.chart-skills2 .delivery-content5 {
   z-index: 4;
   border-color: green;
   animation-name: rotate-one;
-  animation-delay: 0.4s;
-}
-.chart-skills li:nth-child(2) {
-  z-index: 3;
-  border-color: yellowgreen;
-  animation-name: rotate-two;
-  animation-delay: 0.4s;
-}
-.chart-skills2 li:nth-child(2) {
-  z-index: 3;
-  border-color: yellowgreen;
-  animation-name: rotate-two;
-  animation-delay: 0.4s;
-}
-
-.chart-skills li:nth-child(3) {
-  z-index: 2;
-  border-color: yellow;
-  animation-name: rotate-three;
   animation-delay: 0.8s;
 }
-.chart-skills2 li:nth-child(3) {
-  z-index: 2;
-  border-color: yellow;
-  animation-name: rotate-three;
-  animation-delay: 0.8s;
-}
-
-.chart-skills li:nth-child(4) {
-  z-index: 1;
-  border-color: yellow;
-  animation-name: rotate-four;
-  animation-delay: 1s;
-}
-.chart-skills2 li:nth-child(4) {
-  z-index: 1;
-  border-color: yellow;
-  animation-name: rotate-four;
-  animation-delay: 1s;
-}
-.chart-skills li:nth-child(5) {
-  z-index: 5;
-  border-color: orange;
-  animation-name: rotate-five;
-  animation-delay: 1.1s;
-}
-.chart-skills li:nth-child(6) {
-  z-index: 7;
+.chart-skills2 .pitching-content1 {
+  z-index: 3;
   border-color: red;
-  animation-name: rotate-six;
+  animation-name: rotate-two;
+  animation-delay: 1s;
+}
+.chart-skills2 .pitching-content2 {
+  z-index: 3;
+  border-color: orange;
+  animation-name: rotate-two;
+  animation-delay: 1s;
+}
+.chart-skills2 .pitching-content3 {
+  z-index: 3;
+  border-color: yellow;
+  animation-name: rotate-two;
+  animation-delay: 1s;
+}
+.chart-skills2 .pitching-content4 {
+  z-index: 3;
+  border-color: yellowgreen;
+  animation-name: rotate-two;
+  animation-delay: 1s;
+}
+.chart-skills2 .pitching-content5 {
+  z-index: 3;
+  border-color: green;
+  animation-name: rotate-two;
+  animation-delay: 1s;
+}
+
+.chart-skills2 .Retention-content1 {
+  z-index: 1;
+  border-color: red;
+  animation-name: rotate-three;
   animation-delay: 1.2s;
 }
+.chart-skills2 .Retention-content2 {
+  z-index: 1;
+  border-color: orange;
+  animation-name: rotate-three;
+  animation-delay: 1.2s;
+}
+.chart-skills2 .Retention-content3 {
+  z-index: 1;
+  border-color: yellow;
+  animation-name: rotate-three;
+  animation-delay: 1.2s;
+}
+.chart-skills2 .Retention-content4 {
+  z-index: 1;
+  border-color: yellowgreen;
+  animation-name: rotate-three;
+  animation-delay: 1.2s;
+}
+.chart-skills2 .Retention-content5 {
+  z-index: 1;
+  border-color: green;
+  animation-name: rotate-three;
+  animation-delay: 1.2s;
+}
+
 @keyframes rotate-one {
   0% {
     transform: rotate(0.6deg);

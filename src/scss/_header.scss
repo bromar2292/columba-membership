@@ -8,17 +8,34 @@ $primary3: #ffb701;
 $textcolor: white;
 
 .header {
-  width: 100vw;
   color: $primary3;
   font-weight: bold;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+
   padding: 20px;
   background-color: $primarycolor;
+  position: fixed;
+  height: 100vh;
+  width: 180px;
+  border: 1px solid #d9d9d9;
+  background-size: cover;
+  box-shadow: 0 0 16px -6px #000000;
+  box-sizing: border-box;
+  overflow: hidden;
+  z-index: 100;
   button {
     border-radius: 10px;
   }
 }
 .header-link {
+  color: $primary3;
+  padding: 20px 0px;
+  margin: 0px 0px;
+}
+.sign-out {
+  position: absolute;
+  bottom: 10px;
+  width: 50%;
   color: $primary3;
 }

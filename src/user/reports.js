@@ -22,7 +22,7 @@ class Results extends React.Component {
       reports: 0,
       reportsTimestamp: "",
       download_link: "",
-      docs: [],
+      docs: []
     };
   }
   componentWillMount() {
@@ -62,60 +62,58 @@ class Results extends React.Component {
         console.log("Error getting document", err);
       });
 
-      this.getDownloadLink();
+    this.getDownloadLink();
 
-      this.getMarker();
-      
+    this.getMarker();
   }
 
   async getMarker() {
-    const snapshot = await app.firestore().collection('documents').get();
-    
-    snapshot.docs.map(doc => 
+    const snapshot = await app
+      .firestore()
+      .collection("documents")
+      .get();
 
-      this.state.docs.push(doc.data()) );
-      
-
-}
-
-  getDownloadLink = () => {
-    
-    let testRef = app.firestore().collection("documents").doc("e7oPlC8kQZd8p6Qtydao");
-    
-    testRef.get().then( (doc) => {
-      if(doc.exists){
-        console.log("link", doc.data().download_link);
-        this.setState({download_link: doc.data().download_link});
-      
-      }
-    }).catch(function(error){
-      console.log("Error getting firestore doc:", error);
-      
-    });
+    snapshot.docs.map(doc => this.state.docs.push(doc.data()));
   }
 
- MapThroughDocs() {
+  getDownloadLink = () => {
+    let testRef = app
+      .firestore()
+      .collection("documents")
+      .doc("e7oPlC8kQZd8p6Qtydao");
+
+    testRef
+      .get()
+      .then(doc => {
+        if (doc.exists) {
+          console.log("link", doc.data().download_link);
+          this.setState({ download_link: doc.data().download_link });
+        }
+      })
+      .catch(function(error) {
+        console.log("Error getting firestore doc:", error);
+      });
+  };
+
+  MapThroughDocs() {
     console.log("hi");
     console.log(this.state.docs);
-    return this.state.docs.map((data) => {
+    return this.state.docs.map(data => {
       console.log(data);
       return (
         <div>
-          
-        <h4>{data.Document_name}</h4>
-         <p>{data.upload_date}</p>
-         <a href={data.download_link} target="_blank">
-          Download Link </a>
-          </div>
-      )
-    })
+          <h4>{data.Document_name}</h4>
+          <p>{data.upload_date}</p>
+          <a href={data.download_link} target="_blank">
+            Download Link{" "}
+          </a>
+        </div>
+      );
+    });
   }
 
   render() {
     const test = `${this.state.users.logo}`;
-
-
-
 
     return (
       <>
@@ -130,13 +128,12 @@ class Results extends React.Component {
             <h6>Download pdf</h6>
           </div>
           <div className="reports">
-             <h4>Name</h4>
-         <p>Date</p>
-         <a href={this.state.download_link} target="_blank">
-          Download Link </a>
-
+            <h4>{this.users.reportsName}</h4>
+            <p>{this.users.reportsTimestamp}</p>
+            <a href={this.state.download_link} target="_blank">
+              Download Link{" "}
+            </a>
           </div>
-          
         </div>
       </>
     );

@@ -9,6 +9,7 @@ import Pie from "../components/pie3";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { AuthContext } from "../firebase/Auth";
 import { Link, RichText, Date } from "prismic-reactjs";
+import { withRouter, Redirect } from "react-router";
 
 class Profile extends React.Component {
   constructor(props) {
@@ -71,24 +72,17 @@ class Profile extends React.Component {
             <img src={test} /> <h2> Welcome {this.state.users.name}</h2>
           </div>
           <div className="profile-data">
-            <Accordian />
-            {/* {this.state.users &&
-              this.state.users.map(users => {
-                return (
-                  <div>
-                    <p>{users.name}</p>
-                    <p>{users.location}</p>
-                  </div>
-                );
-              })} */}
+            <div className="accordian-timeStamp">
+              <Accordian />
 
+              <div className="timestamp">
+                <h2> Review:</h2>
+                <p>Next appointment {this.state.nextMeeting}</p>
+              </div>
+            </div>
             <div className="pie-chart">
               <Pie />
             </div>
-          </div>
-          <div className="timestamp">
-            <h2> Review:</h2>
-            <p>Next appointment {this.state.nextMeeting}</p>
           </div>
         </div>
       </>
@@ -97,3 +91,14 @@ class Profile extends React.Component {
 }
 
 export default Profile;
+{
+  /* {this.state.users &&
+              this.state.users.map(users => {
+                return (
+                  <div>
+                    <p>{users.name}</p>
+                    <p>{users.location}</p>
+                  </div>
+                );
+              })} */
+}

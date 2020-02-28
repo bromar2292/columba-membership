@@ -24,8 +24,8 @@ const SignUp = ({ history }) => {
             name: "mr programmer",
             logo: "",
             meeting: "",
-            reportsTimestamp: "",
-            reportsName: "",
+            reportsTimestamp: "12/02/2020",
+            reportsName: "report 1",
             pitching: "pitching details",
             growth: "growth details",
             experiance: "experiance details",
@@ -68,19 +68,19 @@ const SignUp = ({ history }) => {
   };
 
   return (
-    <div>
-      <h1>Sign up</h1>
-      <form onSubmit={handleSignUp}>
-        <label>
-          Email
-          <input name="email" type="email" placeholder="Email" />
-        </label>
-        <label>
-          Password
-          <input name="password" type="password" placeholder="Password" />
-        </label>
-        <button type="submit">Sign Up</button>
-      </form>
+    <div className="signUp-page-container">
+      <div className="signUp-container">
+        <h1 className="title">Sign up</h1>
+        <form className="form" onSubmit={handleSignUp}>
+          <label>
+            <input name="email" type="email" placeholder="Email" />
+          </label>
+          <label>
+            <input name="password" type="password" placeholder="Password" />
+          </label>
+          <button type="submit">Sign Up</button>
+        </form>
+      </div>
     </div>
   );
 };

@@ -17,12 +17,42 @@ $primary3: #ffb701;
 $textcolor: white;
 .page-container {
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.signUp-page-container {
+  display: flex;
   // flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
 }
 .login-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  // margin: auto auto;
+  list-style: none;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  min-width: 400px;
+  max-width: 30rem;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 0.8rem 0.1rem rgba(darken($cAccent, 20%), 0.06),
+    0 20px 30px -10px rgba(darken($cAccent, 20%), 0.2);
+}
+.signUp-link {
+  color: $primary2;
+  font-size: large;
+  font-weight: bold;
+}
+.signUp-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -59,4 +89,29 @@ $textcolor: white;
     color: white;
     background-color: $primary2;
   }
+}
+
+.benifits-box {
+  display: flex;
+  justify-content: space-between;
+}
+.benifits-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  // margin: auto auto;
+  list-style: none;
+  margin: 20px;
+  padding: 10px;
+  background-color: #fff;
+  min-width: 400px;
+  max-width: 30rem;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 0.8rem 0.1rem rgba(darken($cAccent, 20%), 0.06),
+    0 20px 30px -10px rgba(darken($cAccent, 20%), 0.2);
+}
+.images {
+  height: 100px;
 }

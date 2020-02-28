@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import app from "../firebase/base";
+import { withRouter, Redirect } from "react-router";
 class Header extends React.Component {
   constructor(props) {
     super(props);
@@ -21,16 +22,17 @@ class Header extends React.Component {
         <Link className="header-link" to="/profile">
           Profile
         </Link>
-
-        <Link onClick={  () => 
-          app.auth().signOut()
-          
-           } to="/">
-          
+        <Link className="header-link" to="/profile">
+          analyitics
+        </Link>
+        <Link
+          className="sign-out"
+          onClick={() => app.auth().signOut()}
+          to="login"
+        >
           Sign out
         </Link>
-       
-      </div> 
+      </div>
     );
   }
 }
