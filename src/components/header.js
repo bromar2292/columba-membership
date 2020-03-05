@@ -1,36 +1,54 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import app from "../firebase/base";
+
+import db from "../firebase/database";
 import { withRouter, Redirect } from "react-router";
 class Header extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      transactions: []
+      transactions: [],
+      users: []
     };
+  }
+  componentWillMount() {
+    let userId = `${app.auth().currentUser.uid}`;
+    // console.log(userId);
+    let User = db.collection("users").doc(userId);
+    User.get()
+      .then(doc => {
+        if (!doc.exists) {
+          console.log("No such document!");
+        } else {
+          let users = doc.data();
+          this.setState({
+            users: users
+          });
+        }
+      })
+      .catch(err => {
+        console.log("Error getting document", err);
+      });
   }
 
   render() {
     return (
       <div className="header">
         {" "}
-        <h2>Columba</h2>
+        <img className="header-logo" src={this.state.users.logo} />
         {/* <button onClick={() =>  } >results</button> */}
         <Link className="header-link" to="/reports">
-          Brand Reports
+          Home
+        </Link>
+        <Link className="header-link" to="/reports">
+          Reports
         </Link>
         <Link className="header-link" to="/profile">
-          Profile
+          Analytics
         </Link>
         <Link className="header-link" to="/analytics">
-          analyitics
-        </Link>
-        <Link
-          className="sign-out"
-          onClick={() => app.auth().signOut()}
-          to="login"
-        >
-          Sign out
+          Rankings
         </Link>
       </div>
     );

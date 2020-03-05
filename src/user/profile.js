@@ -4,11 +4,14 @@ import db from "../firebase/database";
 import "../scss/_.scss";
 import Header from "../components/header";
 import Accordian from "../components/accordian";
-import logo from "./logo.png";
+
 import Pie from "../components/pie3";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { AuthContext } from "../firebase/Auth";
-import { Link, RichText, Date } from "prismic-reactjs";
+import { Link } from "react-router-dom";
+import Analytics from "../components/analytics";
+import Reports from "../components/reports";
+import { RichText, Date } from "prismic-reactjs";
 import { withRouter, Redirect } from "react-router";
 
 class Profile extends React.Component {
@@ -69,19 +72,29 @@ class Profile extends React.Component {
         <div className="profile">
           {" "}
           <div className="welcome">
-            <img src={test} /> <h2> Welcome {this.state.users.name}</h2>
+            <h1> Columba</h1>
+            <Link
+              className="sign-out"
+              onClick={() => app.auth().signOut()}
+              to="login"
+            >
+              Sign out
+            </Link>
           </div>
-          <div className="profile-data">
+          <div className="accordian-pie">
             <div className="accordian-timeStamp">
               <Accordian />
-
-              <div className="timestamp">
-                <h2> Review:</h2>
-                <p>Next appointment {this.state.nextMeeting}</p>
-              </div>
             </div>
             <div className="pie-chart">
               <Pie />
+            </div>
+          </div>
+          <div className="analytics-reports">
+            <div className="analytics-profile">
+              <Analytics />
+            </div>
+            <div className="reports-profile">
+              <Reports />
             </div>
           </div>
         </div>

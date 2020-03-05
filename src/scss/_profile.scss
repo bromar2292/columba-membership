@@ -6,16 +6,24 @@ $primarycolor: #23015b;
 $primary2: #1d48df;
 $primary3: #ffb701;
 $textcolor: white;
+$red: #e64b59;
 .profile {
-  padding: 80px 60px 60px 260px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 1000px;
+  padding: 80px 20% 20px 320px;
 }
-.profile-data {
+.accordian-pie {
   display: flex;
   justify-content: space-between;
 }
 
 .welcome {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+
   padding: 20px 0;
   img {
     height: 40px;
@@ -26,19 +34,21 @@ $textcolor: white;
     margin: auto 0;
   }
 }
+.sign-out {
+  width: 15%;
+  padding: 20px;
+  border: 1px solid grey;
+  border-radius: 30px;
+  text-align: center;
+}
 
 .pie-chart {
   display: flex;
 
   justify-content: center;
-  // margin-left: -150px;
-  margin-top: -150px;
-  margin-right: 50px;
-  // height: 400px;
-  // width: 400px;
 }
 .chart {
-  width: 800px;
+  width: 900px;
   margin-top: -100px;
 }
 .accordian-timeStamp {
@@ -46,19 +56,22 @@ $textcolor: white;
   flex-direction: column;
 }
 .timestamp {
+  display: flex;
   margin: 50px 0;
 
-  width: 40%;
+  width: 600px;
   border-radius: 5px;
   min-width: 400px;
-  max-width: 30rem;
+
   border-radius: 10px;
-  padding: 20px;
+  padding: 10px 20px;
   overflow: hidden;
   box-shadow: 0 0 0.8rem 0.1rem rgba(darken($cAccent, 20%), 0.06),
     0 20px 30px -10px rgba(darken($cAccent, 20%), 0.2);
   h2 {
     text-align: center;
+    font-size: 25px;
+    color: $red;
   }
   p {
     text-align: center;
@@ -67,4 +80,16 @@ $textcolor: white;
 }
 .img {
   height: 50px;
+}
+
+.analytics-reports {
+  display: flex;
+  justify-content: space-between;
+}
+.analytics-profile {
+  margin: -150px 0px 0px 0px;
+}
+
+.reports-profile {
+  margin: -30px 0px 0px 0px;
 }

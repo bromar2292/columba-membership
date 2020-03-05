@@ -59,16 +59,19 @@ class Accordion extends React.Component {
       }
     ];
     return (
-      <div {...{ className: "wrapper" }}>
-        <ul {...{ className: "accordion-list" }}>
-          {data.map((data, key) => {
-            return (
-              <li {...{ className: "accordion-list__item", key }}>
-                <AccordionItem {...data} />
-              </li>
-            );
-          })}
-        </ul>
+      <div className="accordion-container">
+        <h2>Columba Observations</h2>
+        <div {...{ className: "wrapper" }}>
+          <ul {...{ className: "accordion-list" }}>
+            {data.map((data, key) => {
+              return (
+                <li {...{ className: "accordion-list__item", key }}>
+                  <AccordionItem {...data} />
+                </li>
+              );
+            })}
+          </ul>
+        </div>
       </div>
     );
   }

@@ -49,10 +49,6 @@ class Chart extends Component {
       return "2";
     } else if (e === 3) {
       return "3";
-    } else if (e === 4) {
-      return "4";
-    } else if (e === 5) {
-      return "5";
     }
   };
 
@@ -174,63 +170,72 @@ class Chart extends Component {
     console.log(this.Classname(this.state.users.pieGrowth));
     console.log(this.state.works);
     return (
-      <div className="pie-container">
-        <div>{chartData(this.state.chartInfo)}</div>
-        <div className="chart">
-          <ul class="chart-skills">
-            <li
-              className={`cost-content${this.Classname(
-                this.state.users.pieCost
-              )}`}
-              onMouseOver={() => this.setState({ chartInfo: 1 })}
-            >
-              <span>Cost</span>
-            </li>
-            <li
-              className={`experiance-content${this.Classname(
-                this.state.users.pieExperiance
-              )}`}
-              onMouseOver={() => this.setState({ chartInfo: 2 })}
-            >
-              <span>Experiance</span>
-            </li>
-            <li
-              className={`Growth-content${this.Classname(
-                this.state.users.pieGrowth
-              )}`}
-              onMouseOver={() => this.setState({ chartInfo: 3 })}
-            >
-              <span>Growth</span>
-            </li>
-          </ul>
-          <ul class="chart-skills2">
-            <li
-              className={`delivery-content${this.Classname(
-                this.state.users.pieInnovation
-              )}`}
-              onMouseOver={() => this.setState({ chartInfo: 4 })}
-            >
-              <span className="delivery">Delivery</span>
-            </li>
-            <li
-              className={`pitching-content${this.Classname(
-                this.state.users.piePitching
-              )}`}
-              onMouseOver={() => this.setState({ chartInfo: 5 })}
-            >
-              <span>Pitching</span>
-            </li>
-            <li
-              className={`Retention-content${this.Classname(
-                this.state.users.pieRetention
-              )}`}
-              onMouseOver={() => this.setState({ chartInfo: 6 })}
-            >
-              <span>Retention</span>
-            </li>
-          </ul>
+      <>
+        <div className="pie-container">
+          <div className="chart">
+            <div className="chart-position">
+              <ul class="chart-skills">
+                <li
+                  className={`cost-content${this.Classname(
+                    this.state.users.pieCost
+                  )}`}
+                  onMouseOver={() => this.setState({ chartInfo: 1 })}
+                >
+                  <span>Cost</span>
+                </li>
+                <li
+                  className={`experiance-content${this.Classname(
+                    this.state.users.pieExperiance
+                  )}`}
+                  onMouseOver={() => this.setState({ chartInfo: 2 })}
+                >
+                  <span>Experiance</span>
+                </li>
+                <li
+                  className={`Growth-content${this.Classname(
+                    this.state.users.pieGrowth
+                  )}`}
+                  onMouseOver={() => this.setState({ chartInfo: 3 })}
+                >
+                  <span>Growth</span>
+                </li>
+              </ul>
+              <ul class="chart-skills2">
+                <li
+                  className={`delivery-content${this.Classname(
+                    this.state.users.pieInnovation
+                  )}`}
+                  onMouseOver={() => this.setState({ chartInfo: 4 })}
+                >
+                  <span className="delivery">Delivery</span>
+                </li>
+                <li
+                  className={`pitching-content${this.Classname(
+                    this.state.users.piePitching
+                  )}`}
+                  onMouseOver={() => this.setState({ chartInfo: 5 })}
+                >
+                  <span>Pitching</span>
+                </li>
+                <li
+                  className={`Retention-content${this.Classname(
+                    this.state.users.pieRetention
+                  )}`}
+                  onMouseOver={() => this.setState({ chartInfo: 6 })}
+                >
+                  <span>Retention</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div className="timestamp">
+            <h2> Next meeting date:</h2>
+            <p> {this.state.nextMeeting}</p>
+          </div>
         </div>
-      </div>
+
+        <div>{chartData(this.state.chartInfo)}</div>
+      </>
     );
   }
 }

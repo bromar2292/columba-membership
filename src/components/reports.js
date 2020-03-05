@@ -2,10 +2,10 @@ import React, { useContext } from "react";
 import app from "../firebase/base";
 import db from "../firebase/database";
 import "../scss/_.scss";
-import Header from "../components/header";
-import Accordian from "../components/accordian";
+import Header from "./header";
+import Accordian from "./accordian";
 import logo from "./logo.png";
-import Pie from "../components/pie2";
+import Pie from "./pie2";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { AuthContext } from "../firebase/Auth";
 import { Link, RichText, Date } from "prismic-reactjs";
@@ -117,30 +117,24 @@ class Results extends React.Component {
 
     return (
       <>
-        <Header />
-        <div>
-          <div className="welcome-reports">
-            <img src={test} /> <h2> Welcome {this.state.users.name}</h2>
-          </div>
-          <div className="report-title">
-            <h3>Name</h3>
-            <h3>Date</h3>
-            <h6>Download pdf</h6>
-          </div>
-          <div className="reports">
-            <h4>
-              {this.state.users.reportsName
-                ? this.state.users.reportsName
-                : "name"}
-            </h4>
-            <p>
-              {this.state.users.reportsTimestamp
-                ? this.state.users.reportsTimestamp
-                : "date"}
-            </p>
-            <a href={this.state.download_link} target="_blank">
-              Download Link{" "}
-            </a>
+        <div className="reports-page">
+          <h2>Reports</h2>
+          <div className="reports-container">
+            <div className="reports-content">
+              <h4>
+                {this.state.users.reportsName
+                  ? this.state.users.reportsName
+                  : "name"}
+              </h4>
+              <h5>
+                {this.state.users.reportsTimestamp
+                  ? this.state.users.reportsTimestamp
+                  : "date"}
+              </h5>
+              <a href={this.state.download_link} target="_blank">
+                Download Link{" "}
+              </a>
+            </div>
           </div>
         </div>
       </>
