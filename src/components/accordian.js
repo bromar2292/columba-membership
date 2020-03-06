@@ -46,8 +46,8 @@ class Accordion extends React.Component {
         paragraph: this.state.users.experiance
       },
       {
-        title: "Innovation",
-        paragraph: this.state.users.innovation
+        title: "Delivery",
+        paragraph: this.state.users.delivery
       },
       {
         title: "Retention",
@@ -56,6 +56,10 @@ class Accordion extends React.Component {
       {
         title: "Cost",
         paragraph: this.state.users.cost
+      },
+      {
+        title: "innovation",
+        paragraph: this.state.users.innovation
       }
     ];
     return (

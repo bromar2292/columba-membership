@@ -166,7 +166,7 @@ class Chart extends Component {
       }
     };
     console.log(this.Classname(this.state.users.pieCost));
-    console.log(this.Classname(this.state.users.pieExperiance));
+    console.log(this.Classname(this.state.users.pieExperience));
     console.log(this.Classname(this.state.users.pieGrowth));
     console.log(this.state.works);
     return (
@@ -185,7 +185,7 @@ class Chart extends Component {
                 </li>
                 <li
                   className={`experiance-content${this.Classname(
-                    this.state.users.pieExperiance
+                    this.state.users.pieExperience
                   )}`}
                   onMouseOver={() => this.setState({ chartInfo: 2 })}
                 >
@@ -203,7 +203,7 @@ class Chart extends Component {
               <ul class="chart-skills2">
                 <li
                   className={`delivery-content${this.Classname(
-                    this.state.users.pieInnovation
+                    this.state.users.pieDelivery
                   )}`}
                   onMouseOver={() => this.setState({ chartInfo: 4 })}
                 >
