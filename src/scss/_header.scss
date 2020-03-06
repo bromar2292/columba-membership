@@ -17,7 +17,7 @@ $textcolor: white;
   background-color: $primarycolor;
   position: fixed;
   height: 100vh;
-  width: 260px;
+  width: 220px;
   border: 1px solid #d9d9d9;
   background-size: cover;
   box-shadow: 0 0 16px -6px #000000;
@@ -31,11 +31,20 @@ $textcolor: white;
 .header-link {
   font-size: 25px;
   color: white;
-  padding: 40px 0px;
+  padding: 20px 0px;
   margin: 2px 0px;
 }
 .header-link :hover {
   color: $primary3;
   padding: 20px 0px;
   margin: 0px 0px;
+}
+link:hover {
+  color: $primary3;
+}
+.links {
+  display: flex;
+  flex-direction: column;
+  padding-top: 80px;
+  padding-left: 10px;
 }

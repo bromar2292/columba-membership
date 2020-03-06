@@ -11,10 +11,10 @@ $red: #e64b59;
   position: relative;
   display: flex;
   flex-direction: column;
-  min-width: 1000px;
-  padding: 80px 20% 20px 320px;
+  min-width: 900px;
+  padding: 50px 10% 20px 260px;
 }
-.accordian-pie {
+.top-section {
   display: flex;
   justify-content: space-between;
 }
@@ -44,22 +44,38 @@ $red: #e64b59;
 
 .pie-chart {
   display: flex;
-
+  margin-left: -30px;
   justify-content: center;
 }
 .chart {
   width: 900px;
   margin-top: -100px;
 }
-.accordian-timeStamp {
+.main-selection {
   display: flex;
   flex-direction: column;
 }
+.main-selection-analytics {
+  display: flex;
+  flex-direction: column;
+  margin-right: 30px;
+}
+.accordian-timeStamp-analytics {
+  display: flex;
+  flex-direction: column;
+  margin-right: 20px;
+}
+.accordian-timeStamp-reports {
+  display: flex;
+  flex-direction: column;
+  margin-right: 20px;
+  padding-left: 30px;
+}
 .timestamp {
   display: flex;
-  margin: 50px 0;
+  margin: 50px 40px;
 
-  width: 600px;
+  width: 500px;
   border-radius: 5px;
   min-width: 400px;
 
@@ -82,14 +98,24 @@ $red: #e64b59;
   height: 50px;
 }
 
-.analytics-reports {
+.second-section {
   display: flex;
   justify-content: space-between;
 }
 .analytics-profile {
   margin: -150px 0px 0px 0px;
 }
+.analytics-profile-analytics {
+  margin: -100px -30px 0px 0px;
+}
 
 .reports-profile {
   margin: -30px 0px 0px 0px;
+}
+.reports-profile-reports {
+  margin: -30px 60px 0px 0px;
+  width: 900px;
+}
+.reports-profile-analyitcs {
+  margin: -30px 50px 0px 0px;
 }

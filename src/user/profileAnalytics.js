@@ -82,18 +82,19 @@ class Profile extends React.Component {
             </Link>
           </div>
           <div className="top-section">
-            <div className="main-selection">
-              <Accordian accordionContainer="accordion-container" />
+            <div className="main-selection-analytics">
+              <Analytics />
             </div>
+
             <div className="pie-chart">
               <Pie />
             </div>
           </div>
           <div className="second-section">
-            <div className="analytics-profile">
-              <Analytics />
+            <div className="analytics-profile-analytics">
+              <Accordian accordionContainer="accordion-container" />
             </div>
-            <div className="reports-profile">
+            <div className="reports-profile-analytics">
               <Reports
                 reportsContainer="reports-container"
                 reportsPage="reports-page"

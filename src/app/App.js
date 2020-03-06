@@ -11,17 +11,19 @@ import Pie from "../components/pie";
 import "./App.css";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { Authprovider } from "../firebase/Auth";
-import Analytics from "../components/analytics";
+import Analytics from "../user/profileAnalytics";
+import ProfileReports from "../user/profileReports";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 const App = () => (
   <Router>
     <div>
+      <Route exact path="/" component={Login} />
       <Route exact path="/login" component={Login} />
       <Route path="/signup" component={Register} />
       <Authprovider>
         <PrivateRoute path="/profile" component={Profile} />
-        <PrivateRoute path="/reports" component={Reports} />
+        <PrivateRoute path="/reports" component={ProfileReports} />
         <PrivateRoute path="/analytics" component={Analytics} />
         <Route path="/columbaLogin" component={ColumbaLogin} />
         <Route path="/pie" component={Pie} />

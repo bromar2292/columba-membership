@@ -117,9 +117,9 @@ class Results extends React.Component {
 
     return (
       <>
-        <div className="reports-page">
+        <div className={this.props.reportsPage}>
           <h2>Reports</h2>
-          <div className="reports-container">
+          <div className={this.props.reportsContainer}>
             <div className="reports-content">
               <h4>
                 {this.state.users.reportsName

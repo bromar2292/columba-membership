@@ -68,10 +68,10 @@ class Chart extends Component {
     ];
     const chartData = i => {
       if (i === 0) {
-        return <div className="blank"> </div>;
+        return <div className="chart-into-blank"> </div>;
       } else if (i === 1) {
         return (
-          <div className="chart-info">
+          <div className="chart-info-cost">
             <h2>Cost</h2>
             <p>
               {" "}
@@ -88,7 +88,7 @@ class Chart extends Component {
         );
       } else if (i === 2) {
         return (
-          <div className="chart-info">
+          <div className="chart-info-experience">
             {" "}
             <h2>Experiance</h2>
             <p>
@@ -105,7 +105,7 @@ class Chart extends Component {
         );
       } else if (i === 3) {
         return (
-          <div className="chart-info">
+          <div className="chart-info-growth">
             <h2>Growth</h2>
             <p>
               {this.state.users.growthEmployees}% increase in number of
@@ -119,7 +119,7 @@ class Chart extends Component {
         );
       } else if (i === 4) {
         return (
-          <div className="chart-info">
+          <div className="chart-info-delivery">
             <h2>Delivery</h2>
             <p>
               {" "}
@@ -135,7 +135,7 @@ class Chart extends Component {
         );
       } else if (i === 5) {
         return (
-          <div className="chart-info">
+          <div className="chart-info-pitching">
             <h2>Pitching</h2>
             <p>
               {this.state.users.pitchingHours} Number of hours spent on prep{" "}
@@ -148,7 +148,7 @@ class Chart extends Component {
         );
       } else if (i === 6) {
         return (
-          <div className="chart-info">
+          <div className="chart-info-retention">
             <h2>Retention</h2>
             <p>
               {this.state.users.retentionProject} % of clients retained after
@@ -162,7 +162,7 @@ class Chart extends Component {
           </div>
         );
       } else {
-        return <div className="blank"> </div>;
+        return <div className="chart-info-blank"> </div>;
       }
     };
     console.log(this.Classname(this.state.users.pieCost));
@@ -171,6 +171,7 @@ class Chart extends Component {
     console.log(this.state.works);
     return (
       <>
+        <div>{chartData(this.state.chartInfo)}</div>
         <div className="pie-container">
           <div className="chart">
             <div className="chart-position">
@@ -233,8 +234,6 @@ class Chart extends Component {
             <p> {this.state.nextMeeting}</p>
           </div>
         </div>
-
-        <div>{chartData(this.state.chartInfo)}</div>
       </>
     );
   }

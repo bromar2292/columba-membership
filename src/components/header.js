@@ -38,18 +38,20 @@ class Header extends React.Component {
         {" "}
         <img className="header-logo" src={this.state.users.logo} />
         {/* <button onClick={() =>  } >results</button> */}
-        <Link className="header-link" to="/reports">
-          Home
-        </Link>
-        <Link className="header-link" to="/reports">
-          Reports
-        </Link>
-        <Link className="header-link" to="/profile">
-          Analytics
-        </Link>
-        <Link className="header-link" to="/analytics">
-          Rankings
-        </Link>
+        <div className="links">
+          <Link className="header-link" to="/profile">
+            Home
+          </Link>
+          <Link className="header-link" to="/reports">
+            Reports
+          </Link>
+          <Link className="header-link" to="/analytics">
+            Analytics
+          </Link>
+          <Link className="header-link" to="/analytics">
+            Rankings
+          </Link>
+        </div>
       </div>
     );
   }
