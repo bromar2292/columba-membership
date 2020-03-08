@@ -121,8 +121,8 @@ class AccordionItem extends React.Component {
           }}
         >
           <div {...{ className: "accordion-item__line" }}>
-            <h3 {...{ className: "accordion-item__title" }}>{title}</h3>
             <img src={color} {...{ className: "accordion-item__icon" }} />
+            <h3 {...{ className: "accordion-item__title" }}>{title}</h3>
           </div>
           <div {...{ className: "accordion-item__inner" }}>
             <div {...{ className: "accordion-item__content" }}>

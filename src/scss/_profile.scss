@@ -12,7 +12,7 @@ $red: #e64b59;
   display: flex;
   flex-direction: column;
   min-width: 900px;
-  padding: 50px 10% 20px 260px;
+  padding: 50px 20px 20px 290px;
 }
 .top-section {
   display: flex;
@@ -32,25 +32,29 @@ $red: #e64b59;
   }
   h1 {
     margin: auto 0;
+    font-weight: 900;
   }
 }
 .sign-out {
   width: 15%;
-  padding: 20px;
-  border: 1px solid grey;
+  padding: 10px 20px;
+  margin-right: 10px;
+  border: 0.5px solid lightgrey;
   border-radius: 30px;
   text-align: center;
+  color: black;
 }
 
 .pie-chart {
   display: flex;
-  margin-left: -30px;
+  margin-left: 30px;
   justify-content: center;
 }
-.chart {
-  width: 900px;
-  margin-top: -100px;
-}
+// .chart {
+//   width: 900px;
+//   margin-top: -100px;
+//   padding-left: 30px;
+// }
 .main-selection {
   display: flex;
   flex-direction: column;
@@ -73,20 +77,24 @@ $red: #e64b59;
 }
 .timestamp {
   display: flex;
-  margin: 50px 40px;
+  margin: 30px 40px;
 
-  width: 500px;
+  width: 420px;
   border-radius: 5px;
   min-width: 400px;
 
   border-radius: 10px;
-  padding: 10px 20px;
+  background-color: white;
+  padding: 10px 10px;
   overflow: hidden;
   box-shadow: 0 0 0.8rem 0.1rem rgba(darken($cAccent, 20%), 0.06),
     0 20px 30px -10px rgba(darken($cAccent, 20%), 0.2);
   h2 {
     text-align: center;
-    font-size: 25px;
+    font-size: 17px;
+    padding: 4px 0px 0px 20px;
+
+    font-weight: 800;
     color: $red;
   }
   p {
@@ -95,7 +103,7 @@ $red: #e64b59;
   }
 }
 .img {
-  height: 50px;
+  height: 30px;
 }
 
 .second-section {

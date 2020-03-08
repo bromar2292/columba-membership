@@ -14,6 +14,16 @@
       @content;
     }
   }
+  @if $breakpoint == mlg {
+    @media only screen and (min-width: 1400px) {
+      @content;
+    }
+  }
+  @if $breakpoint == llg {
+    @media only screen and (min-width: 1500px) {
+      @content;
+    }
+  }
   @if $breakpoint == xl {
     @media only screen and (min-width: 1600px) {
       @content;

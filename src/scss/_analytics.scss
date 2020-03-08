@@ -17,10 +17,11 @@ $primary3: #ffb701;
 $textcolor: white;
 
 .analytics-container {
-  padding: 60px 20px 10px 40px;
+  padding: 30px 20px 10px 30px;
 
-  height: 500px;
-  width: 600px;
+  height: 400px;
+  background-color: white;
+  width: 480px;
   margin-top: 30px;
   // max-width: 30rem;
   border-radius: 10px;
@@ -28,6 +29,88 @@ $textcolor: white;
   box-shadow: 0 0 0.8rem 0.1rem rgba(darken($cAccent, 20%), 0.06),
     0 20px 30px -10px rgba(darken($cAccent, 20%), 0.2);
   h2 {
-    padding: 10px 0px;
+    padding: 10px 0px 10px 0px;
+    font-weight: 800;
+    font-size: 26px;
+  }
+  @include responsive($breakpoint: "mlg") {
+    width: 620px;
+    height: 500px;
+    margin-top: 30px;
+  }
+  @include responsive($breakpoint: "llg") {
+    width: 700px;
+    height: 600px;
+    margin-top: 60px;
+  }
+  @include responsive($breakpoint: "xl") {
+    width: 900px;
+    height: 600px;
+    margin-right: 45px;
+    margin-top: 80px;
+  }
+}
+.analytics-container-analytics {
+  padding: 30px 20px 10px 30px;
+
+  height: 400px;
+  width: 480px;
+  background-color: white;
+  margin-top: 0px;
+  // max-width: 30rem;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: white;
+  box-shadow: 0 0 0.8rem 0.1rem rgba(darken($cAccent, 20%), 0.06),
+    0 20px 30px -10px rgba(darken($cAccent, 20%), 0.2);
+  h2 {
+    padding: 10px 0px 10px 0px;
+    font-weight: 800;
+    font-size: 26px;
+  }
+  @include responsive($breakpoint: "mlg") {
+    width: 620px;
+    height: 500px;
+    margin-bottom: 0px;
+  }
+  @include responsive($breakpoint: "llg") {
+    width: 700px;
+    height: 520px;
+  }
+  @include responsive($breakpoint: "xl") {
+    width: 900px;
+    height: 600px;
+    margin-right: 45px;
+  }
+}
+.analytics-container-reports {
+  padding: 30px 20px 10px 30px;
+
+  height: 400px;
+  width: 480px;
+  background-color: white;
+  margin-top: 30px;
+  // max-width: 30rem;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 0.8rem 0.1rem rgba(darken($cAccent, 20%), 0.06),
+    0 20px 30px -10px rgba(darken($cAccent, 20%), 0.2);
+  h2 {
+    padding: 10px 0px 10px 0px;
+    font-weight: 800;
+    font-size: 26px;
+  }
+  @include responsive($breakpoint: "mlg") {
+    width: 620px;
+    height: 500px;
+  }
+  @include responsive($breakpoint: "llg") {
+    width: 700px;
+    height: 600px;
+  }
+  @include responsive($breakpoint: "xl") {
+    width: 900px;
+    height: 600px;
+    margin-right: 45px;
   }
 }

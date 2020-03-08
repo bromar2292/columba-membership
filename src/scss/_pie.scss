@@ -2,19 +2,40 @@ $red: #e64b59;
 $yellow: #f0c987;
 $green: #89bd9e;
 $font: white;
+$chart-font: 14px;
 .pie-container {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  margin-right: 20px;
+  margin-right: -30px;
+}
+.pie-container-analytics {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-left: -70px;
+  margin-top: 0px;
+}
+.pie-container-reports {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-left: -100px;
+  margin-top: 0px;
+
+  @include responsive($breakpoint: "xl") {
+    margin-right: -65px;
+  }
 }
 .chart {
   position: relative;
-  width: 500px;
-  height: 500px;
-  padding: 30px;
-  margin: 0 auto;
+  width: 420px;
+  height: 420px;
+  padding: 25px;
+
   border-radius: 10px;
   box-shadow: 0 0 0.8rem 0.1rem rgba(darken($cAccent, 20%), 0.06),
     0 20px 30px -10px rgba(darken($cAccent, 20%), 0.2);
@@ -28,15 +49,15 @@ $font: white;
   position: relative;
 
   padding-bottom: 10px;
-  width: 440px;
-  height: 220px;
+  width: 350px;
+  height: 175px;
 }
 .chart-skills2 {
   position: relative;
 
   margin-top: -15px;
-  width: 440px;
-  height: 220px;
+  width: 350px;
+  height: 175px;
   transform: rotate(180deg);
 }
 .chart-skills::before,
@@ -54,8 +75,8 @@ $font: white;
   height: inherit;
 
   border-bottom: none;
-  border-top-left-radius: 440px;
-  border-top-right-radius: 440px;
+  border-top-left-radius: 350px;
+  border-top-right-radius: 175px;
 }
 .chart-skills2::before {
   content: "";
@@ -63,8 +84,8 @@ $font: white;
   height: inherit;
 
   border-bottom: none;
-  border-top-left-radius: 440px;
-  border-top-right-radius: 440px;
+  border-top-left-radius: 350px;
+  border-top-right-radius: 350px;
 }
 
 .chart-skills::after {
@@ -91,10 +112,10 @@ $font: white;
   left: 0;
   width: inherit;
   height: inherit;
-  border: 130px solid;
+  border: 100px solid;
   border-top: none;
-  border-bottom-left-radius: 220px;
-  border-bottom-right-radius: 220px;
+  border-bottom-left-radius: 175px;
+  border-bottom-right-radius: 175px;
   transform-origin: 50% 0;
   animation-fill-mode: forwards;
   animation-duration: 0.4s;
@@ -107,10 +128,10 @@ $font: white;
   left: 0;
   width: inherit;
   height: inherit;
-  border: 130px solid;
+  border: 100px solid;
   border-top: none;
-  border-bottom-left-radius: 220px;
-  border-bottom-right-radius: 220px;
+  border-bottom-left-radius: 175px;
+  border-bottom-right-radius: 175px;
   transform-origin: 50% 0;
   animation-fill-mode: forwards;
   animation-duration: 0.4s;
@@ -131,8 +152,8 @@ $font: white;
 .chart-skills .cost-content3 span,
 .chart-skills .cost-content4 span,
 .chart-skills .cost-content5 span {
-  top: 90px;
-  left: -80px;
+  top: 75px;
+  left: -75px;
   bottom: 20px;
   font-size: 22px;
   color: $font;
@@ -144,46 +165,44 @@ $font: white;
 .chart-skills2 .delivery-content3 span,
 .chart-skills2 .delivery-content4 span,
 .chart-skills2 .delivery-content5 span {
-  top: 75px;
+  top: 65px;
   left: -65px;
   // right: -30px;
   bottom: 20px;
-  font-size: 22px;
+  font-size: 20px;
   color: $font;
   transform: rotate(60.6deg);
 }
 
 .chart-skills li:nth-child(2) span {
   z-index: 20;
-  top: 75px;
-  left: -90px;
+  top: 47px;
+  left: -80px;
   color: $font;
-  font-size: 22px;
+  font-size: 20px;
   transform: rotate(-120.2deg);
 }
 .chart-skills2 li:nth-child(2) span {
-  top: 80px;
+  top: 47px;
   left: -70px;
-  // right: -30px;
-  bottom: 20px;
-  font-size: 22px;
+  font-size: 20px;
   color: $font;
   transform: rotate(60.2deg);
 }
 
 .chart-skills li:nth-child(3) span {
-  top: 100px;
-  left: -80px;
+  top: 70px;
+  left: -70px;
   bottom: 20px;
-  font-size: 22px;
+  font-size: 20px;
   color: $font;
   transform: rotate(240.4deg);
 }
 .chart-skills2 li:nth-child(3) span {
-  top: 80px;
-  left: -80px;
+  top: 60px;
+  left: -70px;
   bottom: 20px;
-  font-size: 22px;
+  font-size: 20px;
   color: $font;
   transform: rotate(57.4deg);
 }
@@ -192,30 +211,33 @@ $font: white;
   padding: 20px;
 }
 .chart-info-cost {
-  margin: 220px 0px 0px 180px;
+  margin: 150px 0px 0px 240px;
   // margin-right: 200px;
   position: absolute;
 
-  width: 400px;
+  width: 300px;
   background: #e9e9e9;
-  padding: 20px;
+  padding: 15px 20px;
   z-index: 100;
   box-shadow: 0 0 0.8rem 0.1rem rgba(darken($cAccent, 20%), 0.06),
     0 20px 30px -10px rgba(darken($cAccent, 20%), 0.2);
   border-radius: 10px;
   visibility: visible;
+  font-size: $chart-font;
+
   opacity: 1;
   transition: 0.5s;
 }
 .chart-info-experience {
-  margin: 195px 0px 0px 100px;
+  margin: 155px 0px 0px 100px;
   // margin-right: 200px;
   position: absolute;
 
   width: 400px;
   background: #e9e9e9;
-  padding: 20px;
+  padding: 15px 20px;
   z-index: 100;
+  font-size: $chart-font;
   box-shadow: 0 0 0.8rem 0.1rem rgba(darken($cAccent, 20%), 0.06),
     0 20px 30px -10px rgba(darken($cAccent, 20%), 0.2);
   border-radius: 10px;
@@ -224,11 +246,11 @@ $font: white;
   transition: 0.5s;
 }
 .chart-info-growth {
-  margin: 245px 0px 0px 10px;
+  margin: 155px 0px 0px 40px;
   // margin-right: 200px;
   position: absolute;
 
-  width: 400px;
+  width: 300px;
   background: #e9e9e9;
   padding: 20px;
   z-index: 100;
@@ -236,34 +258,37 @@ $font: white;
     0 20px 30px -10px rgba(darken($cAccent, 20%), 0.2);
   border-radius: 10px;
   visibility: visible;
+  font-size: $chart-font;
   opacity: 1;
   transition: 0.5s;
 }
 .chart-info-delivery {
-  margin: 205px 0px 50px 10px;
+  margin: 80px 30px 50px 0px;
   // margin-right: 200px;
   position: absolute;
 
-  width: 400px;
+  width: 350px;
   background: #e9e9e9;
-  padding: 20px;
+  padding: 15px 20px;
   z-index: 100;
   box-shadow: 0 0 0.8rem 0.1rem rgba(darken($cAccent, 20%), 0.06),
     0 20px 30px -10px rgba(darken($cAccent, 20%), 0.2);
   border-radius: 10px;
   visibility: visible;
+  font-size: $chart-font;
   opacity: 1;
   transition: 0.5s;
 }
 .chart-info-pitching {
-  margin: 185px 0px 0px 100px;
+  margin: 105px 0px 0px 150px;
   // margin-right: 200px;
   position: absolute;
 
-  width: 400px;
+  width: 300px;
   background: #e9e9e9;
-  padding: 20px;
+  padding: 15px 20px;
   z-index: 100;
+  font-size: $chart-font;
   box-shadow: 0 0 0.8rem 0.1rem rgba(darken($cAccent, 20%), 0.06),
     0 20px 30px -10px rgba(darken($cAccent, 20%), 0.2);
   border-radius: 10px;
@@ -272,14 +297,15 @@ $font: white;
   transition: 0.5s;
 }
 .chart-info-retention {
-  margin: 185px 0px 0px 200px;
+  margin: 105px 0px 0px 230px;
   // margin-right: 200px;
   position: absolute;
 
-  width: 400px;
+  width: 300px;
   background: #e9e9e9;
-  padding: 20px;
+  padding: 15px 20px;
   z-index: 100;
+  font-size: $chart-font;
   box-shadow: 0 0 0.8rem 0.1rem rgba(darken($cAccent, 20%), 0.06),
     0 20px 30px -10px rgba(darken($cAccent, 20%), 0.2);
   border-radius: 10px;
@@ -294,7 +320,7 @@ $font: white;
 
   width: 400px;
   background: #e9e9e9;
-  padding: 20px;
+  padding: 15px 20px;
   z-index: 100;
   box-shadow: 0 0 0.8rem 0.1rem rgba(darken($cAccent, 20%), 0.06),
     0 20px 30px -10px rgba(darken($cAccent, 20%), 0.2);

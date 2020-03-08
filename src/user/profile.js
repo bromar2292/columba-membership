@@ -4,7 +4,7 @@ import db from "../firebase/database";
 import "../scss/_.scss";
 import Header from "../components/header";
 import Accordian from "../components/accordian";
-
+import background from "../components/static/background.png";
 import Pie from "../components/pie3";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { AuthContext } from "../firebase/Auth";
@@ -69,7 +69,7 @@ class Profile extends React.Component {
     return (
       <>
         <Header />
-        <div className="profile">
+        <div className="profile" styles={{ backgroundImage: { background } }}>
           {" "}
           <div className="welcome">
             <h1> Columba</h1>
@@ -86,12 +86,12 @@ class Profile extends React.Component {
               <Accordian accordionContainer="accordion-container" />
             </div>
             <div className="pie-chart">
-              <Pie />
+              <Pie pieContainer="pie-container" />
             </div>
           </div>
           <div className="second-section">
             <div className="analytics-profile">
-              <Analytics />
+              <Analytics analyticsContainer="analytics-container" />
             </div>
             <div className="reports-profile">
               <Reports

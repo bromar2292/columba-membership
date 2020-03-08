@@ -72,7 +72,7 @@ class Chart extends Component {
       } else if (i === 1) {
         return (
           <div className="chart-info-cost">
-            <h2>Cost</h2>
+            <h4>Cost</h4>
             <p>
               {" "}
               {this.state.users.costHourSenior}Hourly rate of senior employee{" "}
@@ -90,7 +90,7 @@ class Chart extends Component {
         return (
           <div className="chart-info-experience">
             {" "}
-            <h2>Experiance</h2>
+            <h4>Experiance</h4>
             <p>
               {this.state.users.experience2} % of employees with less than 2
               years experience <br />
@@ -106,7 +106,7 @@ class Chart extends Component {
       } else if (i === 3) {
         return (
           <div className="chart-info-growth">
-            <h2>Growth</h2>
+            <h4>Growth</h4>
             <p>
               {this.state.users.growthEmployees}% increase in number of
               employees
@@ -120,7 +120,7 @@ class Chart extends Component {
       } else if (i === 4) {
         return (
           <div className="chart-info-delivery">
-            <h2>Delivery</h2>
+            <h4>Delivery</h4>
             <p>
               {" "}
               {this.state.users.DeliveryOnTime} % of projects completed on time
@@ -136,7 +136,7 @@ class Chart extends Component {
       } else if (i === 5) {
         return (
           <div className="chart-info-pitching">
-            <h2>Pitching</h2>
+            <h4>Pitching</h4>
             <p>
               {this.state.users.pitchingHours} Number of hours spent on prep{" "}
               <br /> {this.state.users.pitchingEnters}Number of pitches entered{" "}
@@ -149,7 +149,7 @@ class Chart extends Component {
       } else if (i === 6) {
         return (
           <div className="chart-info-retention">
-            <h2>Retention</h2>
+            <h4>Retention</h4>
             <p>
               {this.state.users.retentionProject} % of clients retained after
               initial project
@@ -172,7 +172,7 @@ class Chart extends Component {
     return (
       <>
         <div>{chartData(this.state.chartInfo)}</div>
-        <div className="pie-container">
+        <div className={this.props.pieContainer}>
           <div className="chart">
             <div className="chart-position">
               <ul class="chart-skills">

@@ -66,7 +66,7 @@ class Analytics extends React.Component {
   render() {
     return (
       <>
-        <div className="analytics-container">
+        <div className={this.props.analyticsContainer}>
           <h2>Analytics</h2>
 
           <Tabs defaultActiveKey="Overview">
