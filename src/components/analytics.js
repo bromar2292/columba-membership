@@ -8,12 +8,18 @@ import { withRouter, Redirect } from "react-router";
 import Chart from "chart.js";
 
 class Analytics extends React.Component {
-  chartRef = React.createRef();
+  OverviewChart_Ref = React.createRef();
+  WinRatio_Ref = React.createRef();
+  AveragePrepTime_Ref = React.createRef();
+  Costing_Ref = React.createRef();
 
   componentDidMount() {
-    const myChartRef = this.chartRef.current.getContext("2d");
+    const OverviewChartRef = this.OverviewChart_Ref.current.getContext("2d");
+    const WinRatioRef = this.WinRatio_Ref.current.getContext("2d");
+    const AveragePrepTimeRef = this.AveragePrepTime_Ref.current.getContext("2d");
+    const CostingRef = this.Costing_Ref.current.getContext("2d");
 
-    new Chart(myChartRef, {
+    new Chart(OverviewChartRef, {
       type: "line",
       data: {
         labels: ["March 2020", "June 2020", "September 2020", "December 2020"],
@@ -61,6 +67,66 @@ class Analytics extends React.Component {
       },
       options: {}
     });
+
+    new Chart(WinRatioRef, {
+      type: "line",
+      data: {
+        labels: ["March 2020", "June 2020", "September 2020", "December 2020"],
+        datasets: [
+          
+          {
+            label: "Wins",
+            data: [10, 50, 80, 100],
+            borderColor: "red",
+            
+          },
+
+          
+        ]
+      },
+      options: {}
+    });
+
+    new Chart(AveragePrepTimeRef, {
+      type: "line",
+      data: {
+        labels: ["March 2020", "June 2020", "September 2020", "December 2020"],
+        datasets: [
+          {
+            label: "Preparation time",
+            data: [10, 40, 60, 0],
+            borderColor: "blue",
+          },
+
+         
+        ]
+      },
+      options: {}
+    });
+
+
+    new Chart(CostingRef, {
+      type: "line",
+      data: {
+        labels: ["March 2020", "June 2020", "September 2020", "December 2020"],
+        datasets: [
+          {
+            label: "Cost",
+            data: [20, 60, 60, 60],
+            borderColor: "green",
+            
+          },
+          
+        ]
+      },
+      options: {}
+    });
+
+    
+
+
+
+
   }
 
   render() {
@@ -71,18 +137,19 @@ class Analytics extends React.Component {
 
           <Tabs defaultActiveKey="Overview">
             <Tab eventKey="Overview" title="Overview">
-              <canvas id="AnalyticsChart" ref={this.chartRef} />
+              <canvas id="AnalyticsChart" ref={this.OverviewChart_Ref} />
             </Tab>
 
             <Tab eventKey="WinRatio" title="Win Ratio">
-              <div></div>
+            <canvas id="WinRatioChart" ref={this.WinRatio_Ref} />
             </Tab>
 
             <Tab eventKey="AveragePrepTime" title="Average Prep Time">
-              <div></div>
+            <canvas id="WinRatioChart" ref={this.AveragePrepTime_Ref} />
             </Tab>
 
             <Tab eventKey="Costing" title="Costing">
+            <canvas id="WinRatioChart" ref={this.Costing_Ref} />
               <div></div>
             </Tab>
           </Tabs>

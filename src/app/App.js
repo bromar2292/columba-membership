@@ -1,5 +1,5 @@
 import React from "react";
-import Login from "../login";
+import Login from "../LoginPage";
 import Register from "../firebase/SignUp";
 import Profile from "../user/profile";
 import Reports from "../components/reports";
