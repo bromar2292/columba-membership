@@ -172,8 +172,13 @@ class Chart extends Component {
     return (
       <>
         <div>{chartData(this.state.chartInfo)}</div>
+
         <div className={this.props.pieContainer}>
           <div className="chart">
+            <h4>
+              Your
+              <b /> Scores
+            </h4>
             <div className="chart-position">
               <ul class="chart-skills">
                 <li

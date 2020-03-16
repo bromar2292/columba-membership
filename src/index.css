@@ -17,7 +17,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   font: 'mont';
   background-image: url(./components/static//background.png);
-  background-size: cover;
+  background-size: fill;
   font-family: "mont";
 
 }

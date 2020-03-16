@@ -12,7 +12,7 @@ $textcolor: white;
   font-weight: bold;
   display: flex;
   flex-direction: column;
-
+  margin-left: -5px;
   padding: 20px;
   background-color: $primarycolor;
   position: fixed;
@@ -32,6 +32,7 @@ $textcolor: white;
 }
 .header-logo {
   border-radius: 50%;
+
   height: 110px;
   width: 110px;
 }

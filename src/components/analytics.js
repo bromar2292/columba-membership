@@ -16,7 +16,9 @@ class Analytics extends React.Component {
   componentDidMount() {
     const OverviewChartRef = this.OverviewChart_Ref.current.getContext("2d");
     const WinRatioRef = this.WinRatio_Ref.current.getContext("2d");
-    const AveragePrepTimeRef = this.AveragePrepTime_Ref.current.getContext("2d");
+    const AveragePrepTimeRef = this.AveragePrepTime_Ref.current.getContext(
+      "2d"
+    );
     const CostingRef = this.Costing_Ref.current.getContext("2d");
 
     new Chart(OverviewChartRef, {
@@ -73,15 +75,11 @@ class Analytics extends React.Component {
       data: {
         labels: ["March 2020", "June 2020", "September 2020", "December 2020"],
         datasets: [
-          
           {
             label: "Wins",
             data: [10, 50, 80, 100],
-            borderColor: "red",
-            
-          },
-
-          
+            borderColor: "red"
+          }
         ]
       },
       options: {}
@@ -95,15 +93,12 @@ class Analytics extends React.Component {
           {
             label: "Preparation time",
             data: [10, 40, 60, 0],
-            borderColor: "blue",
-          },
-
-         
+            borderColor: "blue"
+          }
         ]
       },
       options: {}
     });
-
 
     new Chart(CostingRef, {
       type: "line",
@@ -113,20 +108,12 @@ class Analytics extends React.Component {
           {
             label: "Cost",
             data: [20, 60, 60, 60],
-            borderColor: "green",
-            
-          },
-          
+            borderColor: "green"
+          }
         ]
       },
       options: {}
     });
-
-    
-
-
-
-
   }
 
   render() {
@@ -141,15 +128,15 @@ class Analytics extends React.Component {
             </Tab>
 
             <Tab eventKey="WinRatio" title="Win Ratio">
-            <canvas id="WinRatioChart" ref={this.WinRatio_Ref} />
+              <canvas id="WinRatioChart" ref={this.WinRatio_Ref} />
             </Tab>
 
             <Tab eventKey="AveragePrepTime" title="Average Prep Time">
-            <canvas id="WinRatioChart" ref={this.AveragePrepTime_Ref} />
+              <canvas id="WinRatioChart" ref={this.AveragePrepTime_Ref} />
             </Tab>
 
             <Tab eventKey="Costing" title="Costing">
-            <canvas id="WinRatioChart" ref={this.Costing_Ref} />
+              <canvas id="WinRatioChart" ref={this.Costing_Ref} />
               <div></div>
             </Tab>
           </Tabs>

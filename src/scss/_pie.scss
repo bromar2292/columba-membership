@@ -34,7 +34,7 @@ $chart-font: 14px;
 .chart {
   position: relative;
   width: 420px;
-  height: 420px;
+  height: 440px;
   padding: 25px;
 
   border-radius: 10px;
@@ -156,7 +156,7 @@ $chart-font: 14px;
   top: 75px;
   left: -75px;
   bottom: 20px;
-  font-size: 22px;
+  font-size: 18px;
   color: $font;
   transform: rotate(-120.6deg);
 }
@@ -170,7 +170,7 @@ $chart-font: 14px;
   left: -65px;
   // right: -30px;
   bottom: 20px;
-  font-size: 20px;
+  font-size: 18px;
   color: $font;
   transform: rotate(60.6deg);
 }
@@ -180,13 +180,13 @@ $chart-font: 14px;
   top: 47px;
   left: -80px;
   color: $font;
-  font-size: 20px;
+  font-size: 18px;
   transform: rotate(-120.2deg);
 }
 .chart-skills2 li:nth-child(2) span {
   top: 47px;
   left: -70px;
-  font-size: 20px;
+  font-size: 18px;
   color: $font;
   transform: rotate(60.2deg);
 }
@@ -195,7 +195,7 @@ $chart-font: 14px;
   top: 70px;
   left: -70px;
   bottom: 20px;
-  font-size: 20px;
+  font-size: 18px;
   color: $font;
   transform: rotate(240.4deg);
 }
@@ -203,7 +203,7 @@ $chart-font: 14px;
   top: 60px;
   left: -70px;
   bottom: 20px;
-  font-size: 20px;
+  font-size: 18px;
   color: $font;
   transform: rotate(57.4deg);
 }
@@ -514,4 +514,8 @@ $chart-font: 14px;
 
   transform-style: preserve-3d;
   backface-visibility: visible;
+}
+h4 {
+  margin: 0 auto;
+  text-align: center;
 }
