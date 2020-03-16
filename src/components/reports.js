@@ -120,20 +120,23 @@ class Results extends React.Component {
         <div className={this.props.reportsPage}>
           <h2>Reports</h2>
           <div className={this.props.reportsContainer}>
-            <div className="reports-content">
-              <h4>
-                {this.state.users.reportsName
-                  ? this.state.users.reportsName
-                  : "name"}
-              </h4>
-              <h5>
-                {this.state.users.reportsTimestamp
-                  ? this.state.users.reportsTimestamp
-                  : "date"}
-              </h5>
-              <a href={this.state.download_link} target="_blank">
-                Download Link{" "}
-              </a>
+            <div>
+              <div className="reports-content">
+                <p>
+                  {this.state.users.reportsName
+                    ? this.state.users.reportsName
+                    : "name"}
+                </p>
+                <p>
+                  {this.state.users.reportsTimestamp
+                    ? this.state.users.reportsTimestamp
+                    : "date"}
+                </p>
+                <a href={this.state.download_link} target="_blank">
+                  Download Link{" "}
+                </a>
+              </div>
+              <div className="underline"></div>
             </div>
           </div>
         </div>

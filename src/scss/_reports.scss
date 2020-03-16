@@ -25,7 +25,7 @@
   height: 40px;
 }
 .reports-page {
-  font-family: "mont";
+  font-family: "mont-light";
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -36,6 +36,7 @@
   // padding: 20px 40px 20px 20px;
   overflow: hidden;
   background-color: white;
+
   box-shadow: 0 0 0.8rem 0.1rem rgba(darken($cAccent, 20%), 0.06),
     0 20px 30px -10px rgba(darken($cAccent, 20%), 0.2);
   h2 {
@@ -44,6 +45,7 @@
     padding: 20px 20px 0px 20px;
     font-weight: 800;
     font-size: 25px;
+    font-family: "mont";
   }
 }
 .reports-page-reports {
@@ -119,6 +121,7 @@
   flex-direction: column;
   width: 80%;
   margin: 20px 30px;
+  font-family: "mont-light";
 }
 .reports-container-analytics {
   display: flex;
@@ -129,6 +132,26 @@
 .reports-content {
   display: flex;
   justify-content: space-between;
+  justify-items: center;
+  font-family: "mont-light";
+  align-items: center;
+  border-bottom: solid 6px black 10%;
+  a {
+    display: flex;
+    align-self: flex-start;
+  }
+}
+.reports-content:hover {
+  display: flex;
+  justify-content: space-between;
+  font-family: "mont";
   align-items: center;
   border-bottom: solid 1px black 90%;
+}
+
+.underline {
+  width: 95%;
+  margin: 0 auto;
+  border: 0.5px solid lightgrey;
+  box-shadow: lightgrey;
 }
