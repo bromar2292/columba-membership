@@ -1,11 +1,16 @@
 @font-face {
   font-family: 'mont';
-  src: local('mont'), ur('./font/Mont.otf'), format('truetype');
+  src: local('mont'), ur('./font/Mont-Heavy.otf'), format('truetype');
+}
+
+@font-face {
+  font-family: 'mont-light';
+  src: local('mont-light'), ur('./font/Mont-Light.otf'), format('truetype');
 }
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'mont''Segoe UI', 'Roboto', 'Oxygen',
+  font-family: -apple-system, BlinkMacSystemFont, 'mont', 'mont-light', 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -13,6 +18,7 @@ body {
   font: 'mont';
   background-image: url(./components/static//background.png);
   background-size: fill;
+  font-family: "mont";
 
 }
 

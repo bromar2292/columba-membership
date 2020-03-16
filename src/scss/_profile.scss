@@ -13,6 +13,7 @@ $red: #e64b59;
   flex-direction: column;
   min-width: 900px;
   padding: 50px 20px 20px 290px;
+  font-family: "mont";
 }
 .top-section {
   display: flex;
@@ -43,6 +44,8 @@ $red: #e64b59;
   border-radius: 30px;
   text-align: center;
   color: black;
+  font-family: "mont-light";
+  font-weight: 500;
 }
 
 .pie-chart {
@@ -111,7 +114,7 @@ $red: #e64b59;
   justify-content: space-between;
 }
 .analytics-profile {
-  margin: -150px 0px 0px 0px;
+  margin: -100px 0px 0px 0px;
 }
 .analytics-profile-analytics {
   margin: -100px -30px 0px 0px;
